@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Functional
+namespace Homeworks
 {
     class Parking<T>
     {
         List<T> Vehicles;
 
-        public void Park(T vehicle) { }
+        public void Park(T vehicle) {
+        }
 
         public T LeaveParking()
         {
