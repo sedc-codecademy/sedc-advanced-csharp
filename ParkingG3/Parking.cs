@@ -12,10 +12,25 @@ namespace ParkingG3
 
         public int Capacity { get; private set; }
 
+        private int otherwiseOccupied;
+
+        public int OccupiedPlaces
+        {
+            get
+            {
+                return storage.Count + otherwiseOccupied;
+            }
+            set
+            {
+
+            }
+        }
+
         public Parking(int capacity)
         {
             Capacity = capacity;
             storage = new Queue<T>();
+            otherwiseOccupied = 0;
         }
 
         public override string ToString()

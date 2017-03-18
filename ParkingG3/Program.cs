@@ -43,10 +43,24 @@ namespace ParkingG3
             parking.Park(values[1]);
             parking.Park(values[2]);
 
+            Console.WriteLine($"{parking.OccupiedPlaces} should be 3");
+
             var result = parking.LeaveParking();
             Console.WriteLine($"result is {result}");
             result = parking.LeaveParking();
             Console.WriteLine($"result is {result}");
+
+            Console.WriteLine($"{parking.OccupiedPlaces} should be 1");
+
+            parking.Park(values[3]);
+            parking.Park(values[4]);
+            parking.Park(values[5]);
+
+            Console.WriteLine($"{parking.OccupiedPlaces} should be 4");
+
+            parking.OccupiedPlaces = 12;
+            Console.WriteLine($"{parking.OccupiedPlaces} should be 12");
+
 
             Console.WriteLine(parking);
             Console.WriteLine(parking.Capacity);
