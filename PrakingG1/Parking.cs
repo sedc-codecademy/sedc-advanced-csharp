@@ -33,7 +33,17 @@ namespace PrakingG1
             }
         }
 
-        public int FreePlaces { get; set; }
+        public int FreePlaces
+        {
+            get
+            {
+                return Capacity - occupiedPlaces;
+            }
+            set
+            {
+                OccupiedPlaces = Capacity - value;
+            }
+        }
 
         public Parking(int capacity)
         {

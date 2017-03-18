@@ -40,7 +40,6 @@ namespace PrakingG1
             occupied = parking.OccupiedPlaces;
             Console.WriteLine($"{occupied} should be 10");
 
-
             try
             {
                 parking.OccupiedPlaces = 2;
@@ -99,7 +98,7 @@ namespace PrakingG1
                 Console.WriteLine("Should see me");
             }
             free = parking.FreePlaces;
-            Console.WriteLine($"{free} should be 9");
+            Console.WriteLine($"{free} should be 11");
 
             try
             {
@@ -111,7 +110,7 @@ namespace PrakingG1
                 Console.WriteLine("Should see me");
             }
             free = parking.FreePlaces;
-            Console.WriteLine($"{free} should be 9");
+            Console.WriteLine($"{free} should be 11");
 
 
             //Console.WriteLine(parking);
