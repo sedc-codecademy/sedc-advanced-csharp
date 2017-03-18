@@ -61,6 +61,12 @@ namespace ParkingG3
             parking.OccupiedPlaces = 12;
             Console.WriteLine($"{parking.OccupiedPlaces} should be 12");
 
+            parking.LeaveParking();
+            Console.WriteLine($"{parking.OccupiedPlaces} should be 11");
+
+            parking.LeaveParking();
+            Console.WriteLine($"{parking.OccupiedPlaces} should be 10");
+
 
             Console.WriteLine(parking);
             Console.WriteLine(parking.Capacity);
