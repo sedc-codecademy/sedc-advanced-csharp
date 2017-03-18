@@ -13,14 +13,27 @@ namespace PrakingG1
         public int Capacity { get; private set; }
 
         private int occupiedPlaces;
-        public int OccupiedPlaces {
-            get {
-                return 0;
+        public int OccupiedPlaces
+        {
+            get
+            {
+                return occupiedPlaces;
             }
-            set {
-
+            set
+            {
+                if (value < vehicles.Count)
+                {
+                    throw new ArgumentException("Value cannot be less than vehicle count");
+                }
+                if (value > Capacity)
+                {
+                    throw new ArgumentException("Value cannot be greater than capacity");
+                }
+                occupiedPlaces = value;
             }
         }
+
+        public int FreePlaces { get; set; }
 
         public Parking(int capacity)
         {
@@ -36,11 +49,13 @@ namespace PrakingG1
         public void Park(T vehicle)
         {
             vehicles.Enqueue(vehicle);
+            occupiedPlaces++;
         }
 
         public T LeaveParking()
         {
             var vehicle = vehicles.Dequeue();
+            occupiedPlaces--;
             return vehicle;
         }
     }
