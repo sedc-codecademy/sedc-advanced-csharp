@@ -28,6 +28,37 @@ namespace PrakingG1
             car = parking.LeaveParking();
             Console.WriteLine(car);
 
+            var occupied = parking.OccupiedPlaces;
+            Console.WriteLine($"{occupied} should be 3");
+
+            parking.OccupiedPlaces = 10;
+            occupied = parking.OccupiedPlaces;
+            Console.WriteLine($"{occupied} should be 10");
+
+            try
+            {
+                parking.OccupiedPlaces = 2;
+                Console.WriteLine("Should not see me");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Should see me");
+            }
+            occupied = parking.OccupiedPlaces;
+            Console.WriteLine($"{occupied} should be 10");
+
+            try
+            {
+                parking.OccupiedPlaces = 50;
+                Console.WriteLine("Should not see me");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Should see me");
+            }
+            occupied = parking.OccupiedPlaces;
+            Console.WriteLine($"{occupied} should be 10");
+
             Console.WriteLine(parking);
         }
     }

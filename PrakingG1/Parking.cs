@@ -15,7 +15,7 @@ namespace PrakingG1
         private int occupiedPlaces;
         public int OccupiedPlaces {
             get {
-
+                return 0;
             }
             set {
 
