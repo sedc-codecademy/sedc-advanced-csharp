@@ -10,7 +10,9 @@ namespace ParkingG3
     {
         static void Main(string[] args)
         {
+            var parking = new Parking<string> (20);
 
+            Console.WriteLine(parking);
         }
     }
 }
