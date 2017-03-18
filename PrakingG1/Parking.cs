@@ -58,6 +58,7 @@ namespace PrakingG1
 
         public virtual void Park(T vehicle)
         {
+            Console.WriteLine("Base Park");
             if (occupiedPlaces == Capacity)
             {
                 throw new InvalidOperationException("Parking is full.");
@@ -68,6 +69,7 @@ namespace PrakingG1
 
         public virtual T LeaveParking()
         {
+            Console.WriteLine("Base LeaveParking");
             if (vehicles.Count == 0)
             {
                 throw new InvalidOperationException("Parking is empty.");
