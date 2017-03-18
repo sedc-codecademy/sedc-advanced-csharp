@@ -12,9 +12,20 @@ namespace PrakingG1
 
         public int Capacity { get; private set; }
 
+        private int occupiedPlaces;
+        public int OccupiedPlaces {
+            get {
+
+            }
+            set {
+
+            }
+        }
+
         public Parking(int capacity)
         {
             Capacity = capacity;
+            vehicles = new Queue<T>();
         }
 
         public override string ToString()
@@ -24,12 +35,13 @@ namespace PrakingG1
 
         public void Park(T vehicle)
         {
-
+            vehicles.Enqueue(vehicle);
         }
 
         public T LeaveParking()
         {
-            return default(T);
+            var vehicle = vehicles.Dequeue();
+            return vehicle;
         }
     }
 }
