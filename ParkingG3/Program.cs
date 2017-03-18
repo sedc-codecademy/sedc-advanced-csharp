@@ -10,18 +10,20 @@ namespace ParkingG3
     {
         static void Main(string[] args)
         {
-            TestParking<string>(20, new List<string>
-            {
-                "Audi",
-                "Mercedes",
-                "Toyota",
-                "Ferarri",
-                "Yugo",
-                "Ford",
-                "BMW",
-                "Opel"
-            });
+            var payed = new PayedParking<string>(100, 3);
 
+            payed.Park("Audi");
+            payed.Park("Ferrari");
+
+            Console.WriteLine(payed.OccupiedPlaces);
+            Console.WriteLine(payed.FreePlaces);
+
+            payed.Park("BMW");
+            payed.Park("Mercedes");
+
+            Console.WriteLine(payed);
+            return;
+            TestParking<string>(20, new List<string> { "Audi","Mercedes","Toyota","Ferrari","Yugo","Ford","BMW","Opel"});
             TestParking<int>(50, new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
         }
 
@@ -61,12 +63,37 @@ namespace ParkingG3
             parking.OccupiedPlaces = 12;
             Console.WriteLine($"{parking.OccupiedPlaces} should be 12");
 
+            try
+            {
+                parking.OccupiedPlaces = 2;
+                Console.WriteLine("YOU SHOULD NOT SEE ME");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            try
+            {
+                parking.OccupiedPlaces = 200;
+                Console.WriteLine("YOU SHOULD NOT SEE ME");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+
             parking.LeaveParking();
             Console.WriteLine($"{parking.OccupiedPlaces} should be 11");
 
             parking.LeaveParking();
             Console.WriteLine($"{parking.OccupiedPlaces} should be 10");
 
+            parking.LeaveParking();
+            Console.WriteLine($"{parking.OccupiedPlaces} should be 9");
+
+            parking.FreePlaces = 8;
 
             Console.WriteLine(parking);
             Console.WriteLine(parking.Capacity);

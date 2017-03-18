@@ -12,17 +12,37 @@ namespace ParkingG3
 
         public int Capacity { get; private set; }
 
-        private int otherwiseOccupied;
+        private int reserved;
 
         public int OccupiedPlaces
         {
             get
             {
-                return storage.Count + otherwiseOccupied;
+                return storage.Count + reserved;
             }
             set
             {
+                if (value < storage.Count)
+                {
+                    throw new Exception("Cannot have less occupied places then cars");
+                }
+                if (value > Capacity)
+                {
+                    throw new Exception("Cannot have more occupied places then places");
+                }
+                reserved = value - storage.Count;
+            }
+        }
 
+        public int FreePlaces
+        {
+            get
+            {
+                return Capacity - OccupiedPlaces;
+            }
+            set
+            {
+                OccupiedPlaces = Capacity - value;
             }
         }
 
@@ -30,12 +50,12 @@ namespace ParkingG3
         {
             Capacity = capacity;
             storage = new Queue<T>();
-            otherwiseOccupied = 0;
+            reserved = 0;
         }
 
         public override string ToString()
         {
-            return $"I'm a parking with a capacity of {Capacity}";
+            return $"I'm a parking with a capacity of {Capacity} and {FreePlaces} available.";
         }
 
         public bool IsFull()
@@ -48,7 +68,7 @@ namespace ParkingG3
             return storage.Count == 0;
         }
 
-        public void Park(T vehicle)
+        public virtual void Park(T vehicle)
         {
             if (storage.Count == Capacity)
             {
@@ -57,7 +77,7 @@ namespace ParkingG3
             storage.Enqueue(vehicle);
         }
 
-        public T LeaveParking()
+        public virtual T LeaveParking()
         {
             if (storage.Count == 0)
             {
@@ -65,6 +85,5 @@ namespace ParkingG3
             }
             return storage.Dequeue();
         }
-
     }
 }
