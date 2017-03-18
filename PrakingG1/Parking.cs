@@ -56,14 +56,22 @@ namespace PrakingG1
             return $"Hi I'm a parking with {Capacity} places";
         }
 
-        public void Park(T vehicle)
+        public virtual void Park(T vehicle)
         {
-            vehicles.Enqueue(vehicle);
+            if (occupiedPlaces == Capacity)
+            {
+                throw new InvalidOperationException("Parking is full.");
+            }
             occupiedPlaces++;
+            vehicles.Enqueue(vehicle);
         }
 
-        public T LeaveParking()
+        public virtual T LeaveParking()
         {
+            if (vehicles.Count == 0)
+            {
+                throw new InvalidOperationException("Parking is empty.");
+            }
             var vehicle = vehicles.Dequeue();
             occupiedPlaces--;
             return vehicle;
