@@ -38,18 +38,27 @@ namespace G3_Interface
                 paidParking
             };
 
-            var kingpin = new Mobster("Tony");
+            var tony = new Mobster("Tony");
 
-            kingpin.AddClient(jean);
-            kingpin.AddClient(paidParking);
+            tony.AddClient(jean);
+            tony.AddClient(paidParking);
 
             Console.WriteLine(jean);
             Console.WriteLine(paidParking);
-            kingpin.TakeCareOfBusiness();
+            tony.TakeCareOfBusiness();
             Console.WriteLine(jean);
             Console.WriteLine(paidParking);
 
+            Barber paul;
+            Grocer giorgio;
+            Mobster nicki;
+            //nicki has paul and giorgio
 
+            Mobster vito;
+            // viot has tony and nicki
+
+
+            
 
 
 
