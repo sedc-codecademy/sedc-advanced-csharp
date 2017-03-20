@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Barber.cs" />
     <Compile Include="IPayable.cs" />
-    <Compile Include="MobBoss.cs" />
+    <Compile Include="Mobster.cs" />
     <Compile Include="PaidParking.cs" />
     <Compile Include="StackParking.cs" />
     <Compile Include="IParking.cs" />
