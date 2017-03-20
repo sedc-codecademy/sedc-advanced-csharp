@@ -26,13 +26,13 @@ namespace G3_Interface
 
         Queue<string> repository;
 
-        public string LeaveParking()
+        public virtual string LeaveParking()
         {
             FreePlaces++;
             return repository.Dequeue();
         }
 
-        public void Park(string vehicle)
+        public virtual void Park(string vehicle)
         {
             FreePlaces--;
             repository.Enqueue(vehicle);
