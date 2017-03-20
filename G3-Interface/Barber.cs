@@ -54,7 +54,7 @@ namespace G3_Interface
 
         public override string ToString()
         {
-            return $"I'm {Name} and I have {Balance} denars";
+            return $"I'm {Name} the barber and I have {Balance} denars";
         }
     }
 }

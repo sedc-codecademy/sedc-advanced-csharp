@@ -38,7 +38,7 @@ namespace G3_Interface
                 paidParking
             };
 
-            var tony = new Mobster("Tony");
+            var tony = new Mobster("Tony","Gun");
 
             tony.AddClient(jean);
             tony.AddClient(paidParking);
@@ -49,19 +49,33 @@ namespace G3_Interface
             Console.WriteLine(jean);
             Console.WriteLine(paidParking);
 
-            Barber paul;
-            Grocer giorgio;
-            Mobster nicki;
-            //nicki has paul and giorgio
+            Barber paul = new Barber("Paul");
+            paul.Makeover("demi");
+            paul.Makeover("bruce");
 
-            Mobster vito;
-            // viot has tony and nicki
+            Grocer giorgio = new Grocer("giorgio");
+            giorgio.SellVegetable("nicki", "peppers", 10);
+            giorgio.SellVegetable("bruce", "zuccini", 6);
 
+            Mobster nicki = new Mobster("nicki","nose");
+            nicki.AddClient(paul);
+            nicki.AddClient(giorgio);
+            Console.WriteLine(paul);
+            Console.WriteLine(giorgio);
+            nicki.TakeCareOfBusiness();
+            Console.WriteLine(paul);
+            Console.WriteLine(giorgio);
+            Console.WriteLine(nicki);
 
-            
-
-
-
+            Mobster vito = new Mobster("vito","long");
+            vito.AddClient(nicki);
+            vito.AddClient(tony);
+            Console.WriteLine(nicki);
+            Console.WriteLine(tony);
+            vito.TakeCareOfBusiness();
+            Console.WriteLine(nicki);
+            Console.WriteLine(tony);
+            Console.WriteLine(vito);
         }
     }
 }

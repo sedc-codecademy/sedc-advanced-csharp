@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Barber.cs" />
+    <Compile Include="Grocer.cs" />
     <Compile Include="IPayable.cs" />
     <Compile Include="Mobster.cs" />
     <Compile Include="PaidParking.cs" />
