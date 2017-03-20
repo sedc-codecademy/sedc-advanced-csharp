@@ -83,11 +83,20 @@ namespace Functional
             //helper.PrintList(target);
 
             //var target = ListHelper.Map(ListHelper.Filter(list, i => i % 2 != 0), x => x * x);
-            //var target = list.Filter(i => i % 2 != 0).Map(x => x * x).Join(;
+            //var target = list.Filter(i => i % 2 != 0).Map(x => x * x).Skip(10).Take(4).OrderBy(x => x % 10);
 
-            var target = from i in list
-                         where i % 2 != 0
-                         select i * i;
+            var target = list
+                .Filter(i => i % 2 != 0)
+                .Map(x => x * x)
+                .Skip(10)
+                .Take(4)
+                .OrderBy(x => x % 10);
+
+            //var target = Enumerable.OrderBy(Enumerable.Take(Enumerable.Skip(ListHelper.Map(ListHelper.Filter(list, i => i % 2 != 0), x => x * x), 10), 4), x => x % 10);
+
+            //var target = from i in list
+            //             where i % 2 != 0
+            //             select i * i;
 
             target.ToList().PrintList();
         }
