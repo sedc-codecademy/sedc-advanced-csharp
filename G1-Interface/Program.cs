@@ -10,6 +10,12 @@ namespace G1_Interface
     {
         static void Main(string[] args)
         {
+            IParking<string> parking = new StackParking<string>(20);
+            parking.Park("Audi");
+            parking.Park("Mercedes");
+            parking.Park("Yugo");
+
+            parking.LeaveParking();
 
         }
     }

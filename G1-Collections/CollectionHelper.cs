@@ -48,7 +48,7 @@ namespace Collections
             }
         }
 
-        internal void PrintStack(Stack<T> stack)
+        internal void PrintStack<T>(Stack<T> stack)
         {
             foreach (var item in stack)
             {
@@ -56,7 +56,7 @@ namespace Collections
             }
         }
 
-        internal void PrintQueue(Queue<T> queue)
+        internal void PrintQueue<T>(Queue<T> queue)
         {
             foreach (var item in queue)
             {
