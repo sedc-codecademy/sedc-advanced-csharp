@@ -43,10 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barber.cs" />
     <Compile Include="IParking.cs" />
+    <Compile Include="IPayable.cs" />
+    <Compile Include="Mobster.cs" />
+    <Compile Include="PaidParking.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueParking.cs" />
     <Compile Include="StackParking.cs" />
+    <Compile Include="WithdrawalException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
