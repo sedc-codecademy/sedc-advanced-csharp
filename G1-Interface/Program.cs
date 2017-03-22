@@ -53,8 +53,8 @@ namespace G1_Interface
 
 
             Mobster vito = new Mobster("Vito", "Big");
-            vito.AddClient(tony);
-            vito.AddClient(vini);
+            //vito.AddClient(tony);
+            //vito.AddClient(vini);
 
             // .. tcb
 
