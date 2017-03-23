@@ -91,7 +91,9 @@ namespace G1_Mobsters.Payables
 
         public void SellBoureque()
         {
-
+            // 1. Прв параметар - тип на бурек (enum)
+            // 2. Втор параметар - boolean дали се купува четвртина или осмина
+            // 3. Параметарот е опционен, со четвртина како default вредност
         }
     }
 }
