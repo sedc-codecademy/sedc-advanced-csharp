@@ -13,7 +13,6 @@ namespace G3_Mobsters
         public string Nickname { get; set; }
         public int Balance { get; private set; }
 
-
         public Mobster(string name, string nickname)
         {
             Name = name;
@@ -29,6 +28,20 @@ namespace G3_Mobsters
 
         public void TakeCareOfBusiness()
         {
+            foreach (var client in clients)
+            {
+                Balance += client.Withdraw(client.Balance / 2);
+            }
+        }
+
+        public int CountNiceClients()
+        {
+            foreach (var client in clients)
+            {
+                clients.Add(client);
+            }
+            return 0;
+            //return clients.Count(c => c.IsNice());
         }
 
         public override string ToString()

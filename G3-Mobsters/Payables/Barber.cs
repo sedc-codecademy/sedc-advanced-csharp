@@ -21,11 +21,12 @@ namespace G3_Mobsters.Payables
 
         public int Price { get; set; }
 
-        public void Withdraw(int ammount)
+        public int Withdraw(int ammount)
         {
             if (Balance < ammount)
-                throw GenerateWithdrawException(ammount);
+                throw new WithdrawException(ammount, Balance);
             Balance -= ammount;
+            return ammount;
         }
 
         public void MakeHaircut(string client)
@@ -41,12 +42,6 @@ namespace G3_Mobsters.Payables
         public void Makeover(string client)
         {
             Balance += 10 * Price;
-        }
-
-        public Exception GenerateWithdrawException(int ammount)
-        {
-            var result = new WithdrawException(ammount, Balance);
-            return result;
         }
 
         public override string ToString()

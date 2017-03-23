@@ -21,11 +21,12 @@ namespace G3_Mobsters.Payables
 
         public int Price { get; set; }
 
-        public void Withdraw(int ammount)
+        public int Withdraw(int ammount)
         {
             if (Balance < ammount)
                 throw new WithdrawException(ammount, Balance);
             Balance -= ammount;
+            return ammount;
         }
 
         public void SellVegetable(string vegetable, int factor = 1)

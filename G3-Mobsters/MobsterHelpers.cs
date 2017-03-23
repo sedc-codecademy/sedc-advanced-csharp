@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace G3_Mobsters
 {
-    public interface IPayable
+    static class MobsterHelpers
     {
-        int Price { get; set; }
-        int Balance { get; }
-
-        int Withdraw(int ammount);
+        public static bool IsNice(this IPayable client)
+        {
+            return client.Balance > 2000;
+        }
     }
 }
