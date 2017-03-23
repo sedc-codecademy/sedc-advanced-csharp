@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AF18CF7E-237A-4E0F-94BD-93B1F64EF58C}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{06267E15-09BA-4AFE-925D-C3F568B3B8ED}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>G1_Mobsters</RootNamespace>
-    <AssemblyName>G1-Mobsters</AssemblyName>
+    <RootNamespace>G1_Students</RootNamespace>
+    <AssemblyName>G1-Students</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,18 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Payables\Baker.cs" />
-    <Compile Include="Payables\BourequeType.cs" />
-    <Compile Include="Payables\ClientFactory.cs" />
-    <Compile Include="Payables\Grocer.cs" />
-    <Compile Include="Payables\Barber.cs" />
-    <Compile Include="Payables\IPayable.cs" />
-    <Compile Include="Mobster.cs" />
-    <Compile Include="Payables\PayableHelper.cs" />
-    <Compile Include="Payables\PieSize.cs" />
-    <Compile Include="Payables\PieType.cs" />
-    <Compile Include="Payables\WithdrawalException.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

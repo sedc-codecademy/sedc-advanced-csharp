@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace G1_Mobsters
 {
-    public class Mobster
+    public class Mobster : IPayable
     {
         public string Name { get; set; }
         public string Nickname { get; set; }
+
+        public int Balance { get; private set; }
 
         List<IPayable> clients;
 
@@ -18,12 +20,13 @@ namespace G1_Mobsters
         {
             Name = name;
             Nickname = nickname;
+            Balance = 0;
             clients = new List<IPayable>();
         }
 
         public override string ToString()
         {
-            return $"I'm {Name} the {Nickname}";
+            return $"I'm {Name} the {Nickname}, and my balance is {Balance}";
         }
 
         public void AddClient(IPayable client)
@@ -33,7 +36,19 @@ namespace G1_Mobsters
 
         public void TakeCareOfBusiness()
         {
-            throw new NotImplementedException();
+            foreach (var client in clients)
+            {
+                this.Deposit(client.Withdraw(client.Balance / 2));
+            }
+        }
+
+        public void GiveCharity()
+        {
+            foreach (var client in clients)
+            {
+                var charity = client.TakeCharity();
+                this.Withdraw(charity);
+            }
         }
 
         public List<string> ListClients()
@@ -46,5 +61,15 @@ namespace G1_Mobsters
             return result;
         }
 
+        public int Withdraw(int ammount)
+        {
+            Balance -= ammount;
+            return ammount;
+        }
+
+        public void Deposit(int ammount)
+        {
+            Balance += ammount;
+        }
     }
 }

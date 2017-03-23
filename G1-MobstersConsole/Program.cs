@@ -34,6 +34,8 @@ namespace G1_MobstersConsole
             {
                 Console.WriteLine(client);
             }
+
+            tony.GiveCharity();
         }
     }
 }
