@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Payables\Baker.cs" />
+    <Compile Include="Payables\BourequeType.cs" />
+    <Compile Include="Payables\ClientFactory.cs" />
     <Compile Include="Payables\Grocer.cs" />
     <Compile Include="Payables\Barber.cs" />
     <Compile Include="Payables\IPayable.cs" />

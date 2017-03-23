@@ -31,5 +31,20 @@ namespace G1_Mobsters
             clients.Add(client);
         }
 
+        public void TakeCareOfBusiness()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<string> ListClients()
+        {
+            var result = new List<string>();
+            foreach (var client in clients)
+            {
+                result.Add(client.ToString());
+            }
+            return result;
+        }
+
     }
 }

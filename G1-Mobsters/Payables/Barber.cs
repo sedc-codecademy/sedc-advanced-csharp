@@ -53,5 +53,11 @@ namespace G1_Mobsters.Payables
         {
             Deposit(1000);
         }
+
+        public override string ToString()
+        {
+            return $"I'm {Name} the barber and my balance is {Balance}";
+        }
+
     }
 }

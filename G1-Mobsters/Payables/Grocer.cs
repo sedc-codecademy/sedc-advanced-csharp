@@ -48,5 +48,11 @@ namespace G1_Mobsters.Payables
         {
             Deposit(100 * factor);
         }
+
+        public override string ToString()
+        {
+            return $"I'm {Name} the grocer and my balance is {Balance}";
+        }
+
     }
 }

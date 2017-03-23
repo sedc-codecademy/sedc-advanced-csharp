@@ -89,11 +89,46 @@ namespace G1_Mobsters.Payables
             Deposit(basePrice * factor);
         }
 
-        public void SellBoureque()
+        public void SellBoureque(BourequeType type, bool isQuater = true)
         {
-            // 1. Прв параметар - тип на бурек (enum)
-            // 2. Втор параметар - boolean дали се купува четвртина или осмина
-            // 3. Параметарот е опционен, со четвртина како default вредност
+            int price;
+            switch (type)
+            {
+                case BourequeType.Meat:
+                    price = 60;
+                    break;
+                case BourequeType.Cheese:
+                    price = 50;
+                    break;
+                case BourequeType.Pizza:
+                    price = 80;
+                    break;
+                case BourequeType.Spinatch:
+                    price = 50;
+                    break;
+                case BourequeType.Leek:
+                    price = 60;
+                    break;
+                default:
+                    throw new ArgumentException("type");
+            }
+
+            double factor;
+            if (isQuater)
+            {
+                factor = 1;
+            } 
+            else
+            {
+                factor = 0.5;
+            }
+
+            Deposit((int)(price * factor));
+        }
+
+        public override string ToString()
+        {
+            return $"I'm {Name} the baker and my balance is {Balance}";
         }
     }
 }
