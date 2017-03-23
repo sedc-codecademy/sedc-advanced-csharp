@@ -40,9 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Payables\Baker.cs" />
+    <Compile Include="Payables\Grocer.cs" />
     <Compile Include="Payables\Barber.cs" />
     <Compile Include="Payables\IPayable.cs" />
     <Compile Include="Mobster.cs" />
+    <Compile Include="Payables\PieSize.cs" />
+    <Compile Include="Payables\PieType.cs" />
     <Compile Include="Payables\WithdrawalException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
