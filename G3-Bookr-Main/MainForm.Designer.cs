@@ -32,9 +32,9 @@
             this.menuHereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lstAuthors = new System.Windows.Forms.ListBox();
-            this.btnGenerateAuthors = new System.Windows.Forms.Button();
             this.openDialog = new System.Windows.Forms.OpenFileDialog();
-            this.txtFileContents = new System.Windows.Forms.TextBox();
+            this.lstNovels = new System.Windows.Forms.ListBox();
+            this.loadNovelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +51,8 @@
             // menuHereToolStripMenuItem
             // 
             this.menuHereToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadAuthorsToolStripMenuItem});
+            this.loadAuthorsToolStripMenuItem,
+            this.loadNovelsToolStripMenuItem});
             this.menuHereToolStripMenuItem.Name = "menuHereToolStripMenuItem";
             this.menuHereToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.menuHereToolStripMenuItem.Text = "File";
@@ -59,7 +60,7 @@
             // loadAuthorsToolStripMenuItem
             // 
             this.loadAuthorsToolStripMenuItem.Name = "loadAuthorsToolStripMenuItem";
-            this.loadAuthorsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.loadAuthorsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadAuthorsToolStripMenuItem.Text = "Load Authors";
             this.loadAuthorsToolStripMenuItem.Click += new System.EventHandler(this.loadAuthorsToolStripMenuItem_Click);
             // 
@@ -75,39 +76,34 @@
             this.lstAuthors.Size = new System.Drawing.Size(302, 529);
             this.lstAuthors.TabIndex = 1;
             // 
-            // btnGenerateAuthors
-            // 
-            this.btnGenerateAuthors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerateAuthors.Location = new System.Drawing.Point(559, 65);
-            this.btnGenerateAuthors.Name = "btnGenerateAuthors";
-            this.btnGenerateAuthors.Size = new System.Drawing.Size(436, 215);
-            this.btnGenerateAuthors.TabIndex = 2;
-            this.btnGenerateAuthors.Text = "button1";
-            this.btnGenerateAuthors.UseVisualStyleBackColor = true;
-            this.btnGenerateAuthors.Click += new System.EventHandler(this.btnGenerateAuthors_Click);
-            // 
             // openDialog
             // 
             this.openDialog.Filter = "JSON files | *.json";
             // 
-            // txtFileContents
+            // lstNovels
             // 
-            this.txtFileContents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFileContents.Location = new System.Drawing.Point(526, 288);
-            this.txtFileContents.Multiline = true;
-            this.txtFileContents.Name = "txtFileContents";
-            this.txtFileContents.Size = new System.Drawing.Size(469, 277);
-            this.txtFileContents.TabIndex = 3;
+            this.lstNovels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstNovels.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstNovels.FormattingEnabled = true;
+            this.lstNovels.ItemHeight = 25;
+            this.lstNovels.Location = new System.Drawing.Point(356, 38);
+            this.lstNovels.Name = "lstNovels";
+            this.lstNovels.Size = new System.Drawing.Size(302, 529);
+            this.lstNovels.TabIndex = 2;
+            // 
+            // loadNovelsToolStripMenuItem
+            // 
+            this.loadNovelsToolStripMenuItem.Name = "loadNovelsToolStripMenuItem";
+            this.loadNovelsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadNovelsToolStripMenuItem.Text = "Load Novels";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 611);
-            this.Controls.Add(this.txtFileContents);
-            this.Controls.Add(this.btnGenerateAuthors);
+            this.Controls.Add(this.lstNovels);
             this.Controls.Add(this.lstAuthors);
             this.Controls.Add(this.mainMenu);
             this.MainMenuStrip = this.mainMenu;
@@ -125,10 +121,10 @@
         private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem menuHereToolStripMenuItem;
         private System.Windows.Forms.ListBox lstAuthors;
-        private System.Windows.Forms.Button btnGenerateAuthors;
         private System.Windows.Forms.ToolStripMenuItem loadAuthorsToolStripMenuItem;
-        private System.Windows.Forms.TextBox txtFileContents;
         private System.Windows.Forms.OpenFileDialog openDialog;
+        private System.Windows.Forms.ListBox lstNovels;
+        private System.Windows.Forms.ToolStripMenuItem loadNovelsToolStripMenuItem;
     }
 }
 

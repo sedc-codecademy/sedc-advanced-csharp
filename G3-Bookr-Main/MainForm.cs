@@ -20,20 +20,6 @@ namespace G3_Bookr_Main
             InitializeComponent();
         }
 
-        private void btnGenerateAuthors_Click(object sender, EventArgs e)
-        {
-            List<Author> authors = new List<Author>()
-            {
-                new Author { Name = "Arthur C. Clarke" },
-                new Author { Name = "Isaac Asimov" },
-                new Author { Name = "Robert Heinlein" },
-                new Author { Name = "J.K. Rowling" }
-            };
-
-            LoadAuthors(authors);
-
-        }
-
         private void LoadAuthors(IEnumerable<Author> authors)
         {
             lstAuthors.Items.Clear();
