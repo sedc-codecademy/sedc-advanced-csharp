@@ -1,0 +1,99 @@
+[
+    {
+        "name": "Larry Niven",
+        "books": [
+            {
+                "title": "Protector",
+                "isRead": true
+            },
+            {
+                "title": "Ringworld",
+                "isRead": true
+            },
+            {
+                "title": "The Integral Trees",
+                "isRead": false
+            },
+            {
+                "title": "The Ringworld Engineers",
+                "isRead": true
+            }
+        ]
+    },
+    {
+        "name": "Ursula K. Le Guin",
+        "books": [
+            {
+                "title": "Powers",
+                "isRead": false
+            },
+            {
+                "title": "Tehanu: The Last Book of Earthsea",
+                "isRead": false
+            },
+            {
+                "title": "The Dispossessed",
+                "isRead": true
+            },
+            {
+                "title": "The Lathe of Heaven",
+                "isRead": true
+            },
+            {
+                "title": "The Left Hand of Darkness",
+                "isRead": true
+            },
+            {
+                "title": "The Other Wind",
+                "isRead": false
+            }
+        ]
+    },
+    {
+        "name": "Robert A. Heinlein",
+        "birthDate": "1907-07-07",
+        "deathDate": "1988-05-08",
+        "books": [
+            {
+                "title": "Double Star",
+                "isRead": true
+            },
+            {
+                "title": "Farmer in the Sky",
+                "isRead": true
+            },
+            {
+                "title": "Friday",
+                "isRead": false
+            },
+            {
+                "title": "Glory Road",
+                "isRead": false
+            },
+            {
+                "title": "Have Space Suit — Will Travel",
+                "isRead": true
+            },
+            {
+                "title": "Job: A Comedy of Justice",
+                "isRead": false
+            },
+            {
+                "title": "Starship Troopers",
+                "isRead": true
+            },
+            {
+                "title": "Stranger in a Strange Land",
+                "isRead": true
+            },
+            {
+                "title": "The Moon Is a Harsh Mistress",
+                "isRead": true
+            },
+            {
+                "title": "Time Enough for Love",
+                "isRead": false
+            }
+        ]
+    }
+]
