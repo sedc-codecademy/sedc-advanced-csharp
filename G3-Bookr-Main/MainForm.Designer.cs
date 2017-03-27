@@ -33,6 +33,8 @@
             this.loadAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lstAuthors = new System.Windows.Forms.ListBox();
             this.btnGenerateAuthors = new System.Windows.Forms.Button();
+            this.openDialog = new System.Windows.Forms.OpenFileDialog();
+            this.txtFileContents = new System.Windows.Forms.TextBox();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             // loadAuthorsToolStripMenuItem
             // 
             this.loadAuthorsToolStripMenuItem.Name = "loadAuthorsToolStripMenuItem";
-            this.loadAuthorsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadAuthorsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.loadAuthorsToolStripMenuItem.Text = "Load Authors";
             this.loadAuthorsToolStripMenuItem.Click += new System.EventHandler(this.loadAuthorsToolStripMenuItem_Click);
             // 
@@ -84,11 +86,27 @@
             this.btnGenerateAuthors.UseVisualStyleBackColor = true;
             this.btnGenerateAuthors.Click += new System.EventHandler(this.btnGenerateAuthors_Click);
             // 
+            // openDialog
+            // 
+            this.openDialog.Filter = "JSON files | *.json";
+            // 
+            // txtFileContents
+            // 
+            this.txtFileContents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFileContents.Location = new System.Drawing.Point(526, 288);
+            this.txtFileContents.Multiline = true;
+            this.txtFileContents.Name = "txtFileContents";
+            this.txtFileContents.Size = new System.Drawing.Size(469, 277);
+            this.txtFileContents.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 611);
+            this.Controls.Add(this.txtFileContents);
             this.Controls.Add(this.btnGenerateAuthors);
             this.Controls.Add(this.lstAuthors);
             this.Controls.Add(this.mainMenu);
@@ -109,6 +127,8 @@
         private System.Windows.Forms.ListBox lstAuthors;
         private System.Windows.Forms.Button btnGenerateAuthors;
         private System.Windows.Forms.ToolStripMenuItem loadAuthorsToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtFileContents;
+        private System.Windows.Forms.OpenFileDialog openDialog;
     }
 }
 

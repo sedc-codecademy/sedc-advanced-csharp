@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace G3_Bookr_Main
         private void btnGenerateAuthors_Click(object sender, EventArgs e)
         {
             List<Author> authors = new List<Author>()
-            { 
+            {
                 new Author { Name = "Arthur C. Clarke" },
                 new Author { Name = "Isaac Asimov" },
                 new Author { Name = "Robert Heinlein" },
@@ -43,7 +44,21 @@ namespace G3_Bookr_Main
 
         private void loadAuthorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = openDialog.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openDialog.FileName;
+                try
+                {
+                    string text = File.ReadAllText(file);
+                    txtFileContents.Text = text;
+                }
+                catch (IOException ioex)
+                {
+                    MessageBox.Show(ioex.Message);
+                }
+            }
         }
+
     }
 }
