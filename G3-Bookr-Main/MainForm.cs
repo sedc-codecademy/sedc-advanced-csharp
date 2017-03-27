@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using Mapper;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,8 @@ namespace G3_Bookr_Main
                 try
                 {
                     string text = File.ReadAllText(file);
-                    txtFileContents.Text = text;
+                    var authors = new JsonAuthorMapper().MapAuthors(text);
+                    LoadAuthors(authors);
                 }
                 catch (IOException ioex)
                 {
