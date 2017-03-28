@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Parser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace G1_Bookr_Main
 {
     public partial class MainForm : Form
     {
+        //private JsonParser parser = new JsonParser();
+
         public MainForm()
         {
             InitializeComponent();
@@ -33,7 +36,7 @@ namespace G1_Bookr_Main
             DisplayAuthors(authors);
         }
 
-        private void DisplayAuthors(List<Author> authors)
+        private void DisplayAuthors(IEnumerable<Author> authors)
         {
             lstAuthors.Items.Clear();
             foreach (var author in authors)
@@ -57,7 +60,10 @@ namespace G1_Bookr_Main
                 try
                 {
                     string text = File.ReadAllText(file);
-                    txtFileDisplay.Text = text;
+                    JsonParser parser = new JsonParser();
+                    var authors = parser.ParseAuthors(text);
+                    DisplayAuthors(authors);
+
                 }
                 catch (IOException ioex)
                 {
@@ -66,5 +72,11 @@ namespace G1_Bookr_Main
 
             }
         }
+
+        private void loadNovelsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

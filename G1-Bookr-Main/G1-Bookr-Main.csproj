@@ -84,6 +84,10 @@
       <Project>{21d0d00a-786a-4f3a-bab4-19c6f99716e1}</Project>
       <Name>G1-Bookr-Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\G1-Bookr-Parser\G1-Bookr-Parser.csproj">
+      <Project>{0b3c3d49-7fb3-4a39-bb88-69017fbcba6a}</Project>
+      <Name>G1-Bookr-Parser</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,7 +7,7 @@
     <ProjectGuid>{0B3C3D49-7FB3-4A39-BB88-69017FBCBA6A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>G1_Bookr_Parser</RootNamespace>
+    <RootNamespace>Parser</RootNamespace>
     <AssemblyName>G1-Bookr-Parser</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

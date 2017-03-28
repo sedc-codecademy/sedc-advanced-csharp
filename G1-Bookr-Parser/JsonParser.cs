@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace G1_Bookr_Parser
+namespace Parser
 {
     public class JsonParser
     {
