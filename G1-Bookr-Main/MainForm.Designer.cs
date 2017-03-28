@@ -34,6 +34,7 @@
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +84,6 @@
             this.mainMenu.Size = new System.Drawing.Size(1144, 24);
             this.mainMenu.TabIndex = 4;
             this.mainMenu.Text = "menuStrip1";
-            this.mainMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mainMenu_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -98,6 +98,12 @@
             this.loadAuthorsToolStripMenuItem.Name = "loadAuthorsToolStripMenuItem";
             this.loadAuthorsToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.loadAuthorsToolStripMenuItem.Text = "Load Authors ...";
+            this.loadAuthorsToolStripMenuItem.Click += new System.EventHandler(this.loadAuthorsToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Title = "Select json file";
             // 
             // MainForm
             // 
@@ -127,6 +133,7 @@
         private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadAuthorsToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

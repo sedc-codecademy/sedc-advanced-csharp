@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,9 +47,24 @@ namespace G1_Bookr_Main
             MessageBox.Show(e.KeyChar + " was pressed");
         }
 
-        private void mainMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void loadAuthorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
 
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog1.FileName;
+                try
+                {
+                    string text = File.ReadAllText(file);
+                    txtFileDisplay.Text = text;
+                }
+                catch (IOException ioex)
+                {
+                    MessageBox.Show("Unable to open file: " + ioex.Message);
+                }
+
+            }
         }
     }
 }
