@@ -1,7 +1,7 @@
 [
     {
         "name": "Larry Niven",
-        "books": [
+        "novels": [
             {
                 "title": "Protector",
                 "isRead": true
@@ -22,7 +22,7 @@
     },
     {
         "name": "Ursula K. Le Guin",
-        "books": [
+        "novels": [
             {
                 "title": "Powers",
                 "isRead": false
@@ -53,7 +53,7 @@
         "name": "Robert A. Heinlein",
         "birthDate": "1907-07-07",
         "deathDate": "1988-05-08",
-        "books": [
+        "novels": [
             {
                 "title": "Double Star",
                 "isRead": true

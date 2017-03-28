@@ -84,6 +84,7 @@
             // 
             this.lstNovels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstNovels.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lstNovels.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstNovels.FormattingEnabled = true;
             this.lstNovels.ItemHeight = 25;
@@ -91,12 +92,14 @@
             this.lstNovels.Name = "lstNovels";
             this.lstNovels.Size = new System.Drawing.Size(302, 529);
             this.lstNovels.TabIndex = 2;
+            this.lstNovels.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstNovels_DrawItem);
             // 
             // loadNovelsToolStripMenuItem
             // 
             this.loadNovelsToolStripMenuItem.Name = "loadNovelsToolStripMenuItem";
             this.loadNovelsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadNovelsToolStripMenuItem.Text = "Load Novels";
+            this.loadNovelsToolStripMenuItem.Click += new System.EventHandler(this.loadNovelsToolStripMenuItem_Click);
             // 
             // MainForm
             // 

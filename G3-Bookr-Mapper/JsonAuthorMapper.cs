@@ -15,5 +15,11 @@ namespace Mapper
             var authors = JsonConvert.DeserializeObject<List<Author>>(json);
             return authors;
         }
+
+        public IEnumerable<Novel> MapNovels(string json)
+        {
+            var novels = JsonConvert.DeserializeObject<IEnumerable<Novel>>(json);
+            return novels;
+        }
     }
 }
