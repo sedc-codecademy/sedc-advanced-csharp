@@ -72,21 +72,21 @@
             // loadAuthorsToolStripMenuItem
             // 
             this.loadAuthorsToolStripMenuItem.Name = "loadAuthorsToolStripMenuItem";
-            this.loadAuthorsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.loadAuthorsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadAuthorsToolStripMenuItem.Text = "Load Authors";
             this.loadAuthorsToolStripMenuItem.Click += new System.EventHandler(this.loadAuthorsToolStripMenuItem_Click);
             // 
             // loadNovelsToolStripMenuItem
             // 
             this.loadNovelsToolStripMenuItem.Name = "loadNovelsToolStripMenuItem";
-            this.loadNovelsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.loadNovelsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadNovelsToolStripMenuItem.Text = "Load Novels";
             this.loadNovelsToolStripMenuItem.Click += new System.EventHandler(this.loadNovelsToolStripMenuItem_Click);
             // 
             // loadNestedToolStripMenuItem
             // 
             this.loadNestedToolStripMenuItem.Name = "loadNestedToolStripMenuItem";
-            this.loadNestedToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.loadNestedToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadNestedToolStripMenuItem.Text = "Load Nested";
             this.loadNestedToolStripMenuItem.Click += new System.EventHandler(this.loadNestedToolStripMenuItem_Click);
             // 
@@ -191,6 +191,7 @@
             this.btnAddNovel.TabIndex = 11;
             this.btnAddNovel.Text = "Add Novel";
             this.btnAddNovel.UseVisualStyleBackColor = true;
+            this.btnAddNovel.Click += new System.EventHandler(this.btnAddNovel_Click);
             // 
             // txtInputNovel
             // 

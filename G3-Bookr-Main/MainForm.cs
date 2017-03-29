@@ -16,7 +16,7 @@ namespace G3_Bookr_Main
     public partial class MainForm : Form
     {
         private List<Author> authors;
-        private IEnumerable<Novel> novels;
+        private List<Novel> novels;
 
         public MainForm()
         {
@@ -40,6 +40,7 @@ namespace G3_Bookr_Main
 
         private void loadAuthorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            openDialog.FileName = "authors.json";
             DialogResult result = openDialog.ShowDialog();
             if (result == DialogResult.OK) // Test result.
             {
@@ -59,6 +60,7 @@ namespace G3_Bookr_Main
 
         private void loadNovelsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            openDialog.FileName = "novels.json";
             DialogResult result = openDialog.ShowDialog();
             if (result == DialogResult.OK) // Test result.
             {
@@ -78,7 +80,7 @@ namespace G3_Bookr_Main
 
         private void LoadNovels(IEnumerable<Novel> novels)
         {
-            this.novels = novels;
+            this.novels = novels.ToList();
             DisplayNovels(this.novels);
         }
 
@@ -134,7 +136,11 @@ namespace G3_Bookr_Main
             var author = lstAuthors.SelectedItem as Author;
             if (author == null)
                 return;
+            DisplayAuthorNovels(author);
+        }
 
+        private void DisplayAuthorNovels(Author author)
+        {
             var filtered = novels.Where(n => n.AuthorId == author.ID);
             DisplayNovels(filtered);
         }
@@ -175,5 +181,31 @@ namespace G3_Bookr_Main
             authors.Insert(0, author);
             LoadAuthors(authors);
         }
+
+        private void btnAddNovel_Click(object sender, EventArgs e)
+        {
+            if (novels == null)
+                return;
+            if (string.IsNullOrWhiteSpace(txtInputNovel.Text))
+                return;
+            var author = lstAuthors.SelectedItem as Author;
+            if (author == null)
+                return;
+
+            var id = novels.Max(n => n.ID) + 1;
+            
+            if (novels.Any(n => n.Title == txtInputNovel.Text && n.AuthorId == author.ID))
+                return;
+
+            var novel = new Novel {
+                ID = id,
+                Title = txtInputNovel.Text,
+                AuthorId = author.ID,
+                IsRead = false
+            };
+            novels.Insert(0, novel);
+            DisplayAuthorNovels(author);
+        }
+
     }
 }
