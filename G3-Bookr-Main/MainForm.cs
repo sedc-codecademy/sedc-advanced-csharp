@@ -15,7 +15,8 @@ namespace G3_Bookr_Main
 {
     public partial class MainForm : Form
     {
-        private IEnumerable<Author> authors;
+        private List<Author> authors;
+        private IEnumerable<Novel> novels;
 
         public MainForm()
         {
@@ -24,11 +25,11 @@ namespace G3_Bookr_Main
 
         private void LoadAuthors(IEnumerable<Author> authors)
         {
-            this.authors = authors;
-            DisplayAuthors();
+            this.authors = authors.ToList();
+            DisplayAuthors(this.authors);
         }
 
-        private void DisplayAuthors()
+        private void DisplayAuthors(IEnumerable<Author> authors)
         {
             lstAuthors.Items.Clear();
             foreach (var author in authors)
@@ -77,12 +78,20 @@ namespace G3_Bookr_Main
 
         private void LoadNovels(IEnumerable<Novel> novels)
         {
+            this.novels = novels;
+            DisplayNovels(this.novels);
+        }
+
+        private void DisplayNovels(IEnumerable<Novel> novels)
+        {
             lstNovels.Items.Clear();
             foreach (var novel in novels)
             {
                 lstNovels.Items.Add(novel);
             }
         }
+
+
 
         private void lstNovels_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -109,6 +118,62 @@ namespace G3_Bookr_Main
 
             lblAuthor.Text = author.ToString();
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var searchTerm = txtAuthorName.Text.ToLowerInvariant();
+            var filtered = authors.Where(a => a.Name.ToLowerInvariant().Contains(searchTerm));
+            DisplayAuthors(filtered);
+        }
+
+        private void lstAuthors_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (novels == null)
+                return;
+            var author = lstAuthors.SelectedItem as Author;
+            if (author == null)
+                return;
+
+            var filtered = novels.Where(n => n.AuthorId == author.ID);
+            DisplayNovels(filtered);
+        }
+
+        private void loadNestedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = openDialog.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openDialog.FileName;
+                try
+                {
+                    string text = File.ReadAllText(file);
+                    var authors = new JsonAuthorMapper().MapNestedAuthors(text);
+
+                    NestedAuthors nestedForm = new NestedAuthors();
+                    nestedForm.ShowAuthors(authors);
+                    nestedForm.ShowDialog();
+                }
+                catch (IOException ioex)
+                {
+                    MessageBox.Show(ioex.Message);
+                }
+            }
+        }
+
+        private void btnAddAuthor_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtInputAuthor.Text))
+                return;
+
+            var id = authors.Max(a => a.ID) + 1;
+
+            if (authors.Any(a => a.Name == txtInputAuthor.Text))
+                return;
+
+            var author = new Author { Name = txtInputAuthor.Text, ID = id };
+            authors.Insert(0, author);
+            LoadAuthors(authors);
         }
     }
 }

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs" />
+    <Compile Include="Nested\Author.cs" />
     <Compile Include="Novel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

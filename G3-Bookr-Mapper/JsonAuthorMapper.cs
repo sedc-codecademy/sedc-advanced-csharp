@@ -1,4 +1,5 @@
 ﻿using Model;
+using Model.Nested;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,12 @@ namespace Mapper
         {
             var novels = JsonConvert.DeserializeObject<IEnumerable<Novel>>(json);
             return novels;
+        }
+
+        public IEnumerable<NestedAuthor> MapNestedAuthors(string json)
+        {
+            var authors = JsonConvert.DeserializeObject<IEnumerable<NestedAuthor>>(json);
+            return authors;
         }
     }
 }

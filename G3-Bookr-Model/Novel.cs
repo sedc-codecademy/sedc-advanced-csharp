@@ -8,7 +8,9 @@ namespace Model
 {
     public class Novel
     {
+        public int ID { get; set; }
         public string Title { get; set; }
+        public int AuthorId { get; set; }
         public bool IsRead { get; set; }
 
         public override string ToString()

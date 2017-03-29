@@ -32,6 +32,7 @@
             this.menuHereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadNovelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadNestedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lstAuthors = new System.Windows.Forms.ListBox();
             this.openDialog = new System.Windows.Forms.OpenFileDialog();
             this.lstNovels = new System.Windows.Forms.ListBox();
@@ -40,6 +41,10 @@
             this.lblAuthor = new System.Windows.Forms.Label();
             this.txtAuthorName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.txtInputAuthor = new System.Windows.Forms.TextBox();
+            this.btnAddAuthor = new System.Windows.Forms.Button();
+            this.btnAddNovel = new System.Windows.Forms.Button();
+            this.txtInputNovel = new System.Windows.Forms.TextBox();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +63,8 @@
             // 
             this.menuHereToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadAuthorsToolStripMenuItem,
-            this.loadNovelsToolStripMenuItem});
+            this.loadNovelsToolStripMenuItem,
+            this.loadNestedToolStripMenuItem});
             this.menuHereToolStripMenuItem.Name = "menuHereToolStripMenuItem";
             this.menuHereToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
             this.menuHereToolStripMenuItem.Text = "File";
@@ -77,6 +83,13 @@
             this.loadNovelsToolStripMenuItem.Text = "Load Novels";
             this.loadNovelsToolStripMenuItem.Click += new System.EventHandler(this.loadNovelsToolStripMenuItem_Click);
             // 
+            // loadNestedToolStripMenuItem
+            // 
+            this.loadNestedToolStripMenuItem.Name = "loadNestedToolStripMenuItem";
+            this.loadNestedToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.loadNestedToolStripMenuItem.Text = "Load Nested";
+            this.loadNestedToolStripMenuItem.Click += new System.EventHandler(this.loadNestedToolStripMenuItem_Click);
+            // 
             // lstAuthors
             // 
             this.lstAuthors.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -85,10 +98,11 @@
             this.lstAuthors.FormattingEnabled = true;
             this.lstAuthors.ItemHeight = 25;
             this.lstAuthors.Location = new System.Drawing.Point(15, 33);
-            this.lstAuthors.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstAuthors.Margin = new System.Windows.Forms.Padding(6);
             this.lstAuthors.Name = "lstAuthors";
             this.lstAuthors.Size = new System.Drawing.Size(270, 429);
             this.lstAuthors.TabIndex = 1;
+            this.lstAuthors.SelectedIndexChanged += new System.EventHandler(this.lstAuthors_SelectedIndexChanged);
             // 
             // openDialog
             // 
@@ -103,7 +117,7 @@
             this.lstNovels.FormattingEnabled = true;
             this.lstNovels.ItemHeight = 25;
             this.lstNovels.Location = new System.Drawing.Point(309, 33);
-            this.lstNovels.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstNovels.Margin = new System.Windows.Forms.Padding(6);
             this.lstNovels.Name = "lstNovels";
             this.lstNovels.Size = new System.Drawing.Size(292, 429);
             this.lstNovels.TabIndex = 2;
@@ -150,12 +164,50 @@
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Search Author";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtInputAuthor
+            // 
+            this.txtInputAuthor.Location = new System.Drawing.Point(666, 310);
+            this.txtInputAuthor.Name = "txtInputAuthor";
+            this.txtInputAuthor.Size = new System.Drawing.Size(219, 31);
+            this.txtInputAuthor.TabIndex = 8;
+            // 
+            // btnAddAuthor
+            // 
+            this.btnAddAuthor.Location = new System.Drawing.Point(891, 310);
+            this.btnAddAuthor.Name = "btnAddAuthor";
+            this.btnAddAuthor.Size = new System.Drawing.Size(191, 31);
+            this.btnAddAuthor.TabIndex = 9;
+            this.btnAddAuthor.Text = "Add Author";
+            this.btnAddAuthor.UseVisualStyleBackColor = true;
+            this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
+            // 
+            // btnAddNovel
+            // 
+            this.btnAddNovel.Location = new System.Drawing.Point(891, 361);
+            this.btnAddNovel.Name = "btnAddNovel";
+            this.btnAddNovel.Size = new System.Drawing.Size(191, 31);
+            this.btnAddNovel.TabIndex = 11;
+            this.btnAddNovel.Text = "Add Novel";
+            this.btnAddNovel.UseVisualStyleBackColor = true;
+            // 
+            // txtInputNovel
+            // 
+            this.txtInputNovel.Location = new System.Drawing.Point(666, 361);
+            this.txtInputNovel.Name = "txtInputNovel";
+            this.txtInputNovel.Size = new System.Drawing.Size(219, 31);
+            this.txtInputNovel.TabIndex = 10;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 492);
+            this.Controls.Add(this.btnAddNovel);
+            this.Controls.Add(this.txtInputNovel);
+            this.Controls.Add(this.btnAddAuthor);
+            this.Controls.Add(this.txtInputAuthor);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtAuthorName);
             this.Controls.Add(this.lblAuthor);
@@ -166,7 +218,7 @@
             this.Controls.Add(this.mainMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.mainMenu;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainForm";
             this.Text = "OOP with C# - Bookr";
             this.mainMenu.ResumeLayout(false);
@@ -190,6 +242,11 @@
         private System.Windows.Forms.Label lblAuthor;
         private System.Windows.Forms.TextBox txtAuthorName;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ToolStripMenuItem loadNestedToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtInputAuthor;
+        private System.Windows.Forms.Button btnAddAuthor;
+        private System.Windows.Forms.Button btnAddNovel;
+        private System.Windows.Forms.TextBox txtInputNovel;
     }
 }
 
