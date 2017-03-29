@@ -45,9 +45,13 @@ namespace G1_Bookr_Main
             }
         }
 
-        private void button1_KeyPress(object sender, KeyPressEventArgs e)
+        private void DisplayNovels(IEnumerable<Novel> novels)
         {
-            MessageBox.Show(e.KeyChar + " was pressed");
+            lstNovels.Items.Clear();
+            foreach (var author in novels)
+            {
+                lstNovels.Items.Add(author);
+            }
         }
 
         private void loadAuthorsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,8 +79,41 @@ namespace G1_Bookr_Main
 
         private void loadNovelsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog1.FileName;
+                try
+                {
+                    string text = File.ReadAllText(file);
+                    JsonParser parser = new JsonParser();
+                    var novels = parser.ParseNovels(text);
+                    DisplayNovels(novels);
+                }
+                catch (IOException ioex)
+                {
+                    MessageBox.Show("Unable to open file: " + ioex.Message);
+                }
+
+            }
         }
 
+        private void lstNovels_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            // based on http://stackoverflow.com/questions/25937721/c-sharp-listbox-ownerdrawfixedmode-scrolling-doesnt-show-list-properly
+            Novel novel = lstNovels.Items[e.Index] as Novel; // Get the current item and cast it to MyListBoxItem
+            var brush = novel.IsRead ? new SolidBrush(Color.Gray) : new SolidBrush(Color.Black); // Set the color 
+            if (novel != null)
+            {
+                e.Graphics.DrawString( // Draw the appropriate text in the ListBox
+                    novel.ToString(), // The message linked to the item
+                    lstNovels.Font, // Take the font from the listbox
+                    brush,
+                    e.Bounds.X, // X pixel coordinate
+                    e.Bounds.Y // Y pixel coordinate.  Multiply the index by the ItemHeight defined in the listbox.
+                );
+            }
+        }
     }
 }

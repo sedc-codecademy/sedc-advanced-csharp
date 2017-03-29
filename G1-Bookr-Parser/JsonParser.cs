@@ -15,5 +15,11 @@ namespace Parser
             List<Author> authors = JsonConvert.DeserializeObject<List<Author>>(json);
             return authors;
         }
+
+        public IEnumerable<Novel> ParseNovels(string json)
+        {
+            List<Novel> novels = JsonConvert.DeserializeObject<List<Novel>>(json);
+            return novels;
+        }
     }
 }

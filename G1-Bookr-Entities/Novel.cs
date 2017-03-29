@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model
+namespace Entities
 {
-    public class Author
+    public class Novel
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
+        public string Title { get; set; }
+        public bool IsRead { get; set; }
+        public int? Pages { get; set; }
 
         public override string ToString()
         {
-            return $"#{ID}: {Name}";
+            return Title;
         }
     }
-
 }

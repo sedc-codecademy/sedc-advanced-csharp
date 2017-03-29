@@ -15,12 +15,20 @@ namespace G3_Bookr_Main
 {
     public partial class MainForm : Form
     {
+        private IEnumerable<Author> authors;
+
         public MainForm()
         {
             InitializeComponent();
         }
 
         private void LoadAuthors(IEnumerable<Author> authors)
+        {
+            this.authors = authors;
+            DisplayAuthors();
+        }
+
+        private void DisplayAuthors()
         {
             lstAuthors.Items.Clear();
             foreach (var author in authors)
@@ -78,6 +86,9 @@ namespace G3_Bookr_Main
 
         private void lstNovels_DrawItem(object sender, DrawItemEventArgs e)
         {
+            if (e.Index == -1)
+                return;
+
             Novel novel = lstNovels.Items[e.Index] as Novel;
             if (novel == null)
                 return;
@@ -88,6 +99,16 @@ namespace G3_Bookr_Main
                 e.Bounds.X,
                 e.Bounds.Y);
             e.DrawFocusRectangle();
+        }
+
+        private void btnShowAuthor_Click(object sender, EventArgs e)
+        {
+            var id = int.Parse(txtAuthorID.Text);
+
+            var author = authors.First(a => a.ID == id);
+
+            lblAuthor.Text = author.ToString();
+
         }
     }
 }

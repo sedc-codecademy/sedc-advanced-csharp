@@ -80,7 +80,8 @@ namespace G1_Bookr_Main
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadAuthorsToolStripMenuItem, this.loadNovelsToolStripMenuItem});
+            this.loadAuthorsToolStripMenuItem,
+            this.loadNovelsToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -108,14 +109,16 @@ namespace G1_Bookr_Main
             // 
             this.lstNovels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstNovels.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lstNovels.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstNovels.FormattingEnabled = true;
             this.lstNovels.ItemHeight = 25;
             this.lstNovels.Location = new System.Drawing.Point(338, 23);
             this.lstNovels.Margin = new System.Windows.Forms.Padding(6);
             this.lstNovels.Name = "lstNovels";
-            this.lstNovels.Size = new System.Drawing.Size(302, 554);
+            this.lstNovels.Size = new System.Drawing.Size(429, 554);
             this.lstNovels.TabIndex = 5;
+            this.lstNovels.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstNovels_DrawItem);
             // 
             // MainForm
             // 
