@@ -1,7 +1,8 @@
 [
     {
         "id": 78,
-        "name": "Edgar Rice Burroughs"
+        "name": "Edgar Rice Burroughs",
+		"country": "England"
     },
     {
         "id": 79,
@@ -9,7 +10,8 @@
     },
     {
         "id": 80,
-        "name": "Jack Williamson"
+        "name": "Jack Williamson",
+		"country": "USA"
     },
     {
         "id": 81,
@@ -59,7 +61,8 @@
     },
     {
         "id": 95,
-        "name": "Arthur C. Clarke"
+        "name": "Arthur C. Clarke",
+		"country": "Sri Lanka"
     },
     {
         "id": 97,

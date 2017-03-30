@@ -37,6 +37,11 @@ namespace G1_Bookr_Main
             this.loadNovelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lstNovels = new System.Windows.Forms.ListBox();
+            this.btnGetAuthor = new System.Windows.Forms.Button();
+            this.txtFindAuthorId = new System.Windows.Forms.TextBox();
+            this.lblAuthor = new System.Windows.Forms.Label();
+            this.txtFindAuthorName = new System.Windows.Forms.TextBox();
+            this.btnFindAuthors = new System.Windows.Forms.Button();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,11 +111,58 @@ namespace G1_Bookr_Main
             this.lstNovels.TabIndex = 5;
             this.lstNovels.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstNovels_DrawItem);
             // 
+            // btnGetAuthor
+            // 
+            this.btnGetAuthor.Location = new System.Drawing.Point(983, 27);
+            this.btnGetAuthor.Name = "btnGetAuthor";
+            this.btnGetAuthor.Size = new System.Drawing.Size(149, 31);
+            this.btnGetAuthor.TabIndex = 6;
+            this.btnGetAuthor.Text = "Get Author";
+            this.btnGetAuthor.UseVisualStyleBackColor = true;
+            this.btnGetAuthor.Click += new System.EventHandler(this.btnGetAuthor_Click);
+            // 
+            // txtFindAuthorId
+            // 
+            this.txtFindAuthorId.Location = new System.Drawing.Point(800, 27);
+            this.txtFindAuthorId.Name = "txtFindAuthorId";
+            this.txtFindAuthorId.Size = new System.Drawing.Size(177, 31);
+            this.txtFindAuthorId.TabIndex = 7;
+            // 
+            // lblAuthor
+            // 
+            this.lblAuthor.AutoSize = true;
+            this.lblAuthor.Location = new System.Drawing.Point(800, 74);
+            this.lblAuthor.Name = "lblAuthor";
+            this.lblAuthor.Size = new System.Drawing.Size(0, 25);
+            this.lblAuthor.TabIndex = 8;
+            // 
+            // txtFindAuthorName
+            // 
+            this.txtFindAuthorName.Location = new System.Drawing.Point(800, 185);
+            this.txtFindAuthorName.Name = "txtFindAuthorName";
+            this.txtFindAuthorName.Size = new System.Drawing.Size(177, 31);
+            this.txtFindAuthorName.TabIndex = 10;
+            // 
+            // btnFindAuthors
+            // 
+            this.btnFindAuthors.Location = new System.Drawing.Point(983, 185);
+            this.btnFindAuthors.Name = "btnFindAuthors";
+            this.btnFindAuthors.Size = new System.Drawing.Size(149, 31);
+            this.btnFindAuthors.TabIndex = 9;
+            this.btnFindAuthors.Text = "Find Authors";
+            this.btnFindAuthors.UseVisualStyleBackColor = true;
+            this.btnFindAuthors.Click += new System.EventHandler(this.btnFindAuthors_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 589);
+            this.Controls.Add(this.txtFindAuthorName);
+            this.Controls.Add(this.btnFindAuthors);
+            this.Controls.Add(this.lblAuthor);
+            this.Controls.Add(this.txtFindAuthorId);
+            this.Controls.Add(this.btnGetAuthor);
             this.Controls.Add(this.lstNovels);
             this.Controls.Add(this.lstAuthors);
             this.Controls.Add(this.mainMenu);
@@ -134,6 +186,11 @@ namespace G1_Bookr_Main
         private System.Windows.Forms.ToolStripMenuItem loadNovelsToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ListBox lstNovels;
+        private System.Windows.Forms.Button btnGetAuthor;
+        private System.Windows.Forms.TextBox txtFindAuthorId;
+        private System.Windows.Forms.Label lblAuthor;
+        private System.Windows.Forms.TextBox txtFindAuthorName;
+        private System.Windows.Forms.Button btnFindAuthors;
     }
 }
 

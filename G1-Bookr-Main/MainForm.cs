@@ -15,11 +15,12 @@ namespace G1_Bookr_Main
 {
     public partial class MainForm : Form
     {
-        //private JsonParser parser = new JsonParser();
+        private List<Author> authors;
 
         public MainForm()
         {
             InitializeComponent();
+            authors = new List<Author>();
         }
 
         private void DisplayAuthors(IEnumerable<Author> authors)
@@ -42,6 +43,7 @@ namespace G1_Bookr_Main
 
         private void loadAuthorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            openFileDialog1.FileName = "authors.json";
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
 
             if (result == DialogResult.OK) // Test result.
@@ -51,7 +53,7 @@ namespace G1_Bookr_Main
                 {
                     string text = File.ReadAllText(file);
                     JsonParser parser = new JsonParser();
-                    var authors = parser.ParseAuthors(text);
+                    authors = parser.ParseAuthors(text).ToList();
                     DisplayAuthors(authors);
 
                 }
@@ -65,6 +67,7 @@ namespace G1_Bookr_Main
 
         private void loadNovelsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            openFileDialog1.FileName = "novels.json";
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
 
             if (result == DialogResult.OK) // Test result.
@@ -100,6 +103,24 @@ namespace G1_Bookr_Main
                     e.Bounds.Y // Y pixel coordinate.  Multiply the index by the ItemHeight defined in the listbox.
                 );
             }
+        }
+
+        private void btnGetAuthor_Click(object sender, EventArgs e)
+        {
+            var id = int.Parse(txtFindAuthorId.Text);
+            var author = authors.SingleOrDefault(a => a.Id == id);
+            if (author == null)
+                return;
+
+            lblAuthor.Text = $"ID = {author.Id}" + Environment.NewLine +
+                             $"Name = {author.Name}" + Environment.NewLine +
+                             $"Country = {author.Country}";
+
+        }
+
+        private void btnFindAuthors_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
