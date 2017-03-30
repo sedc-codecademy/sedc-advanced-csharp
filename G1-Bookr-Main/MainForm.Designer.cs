@@ -43,6 +43,8 @@ namespace G1_Bookr_Main
             this.txtFindAuthorName = new System.Windows.Forms.TextBox();
             this.btnFindAuthors = new System.Windows.Forms.Button();
             this.btnTransform = new System.Windows.Forms.Button();
+            this.btnSaveAuthors = new System.Windows.Forms.Button();
+            this.btnSaveNovels = new System.Windows.Forms.Button();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,11 +167,31 @@ namespace G1_Bookr_Main
             this.btnTransform.UseVisualStyleBackColor = true;
             this.btnTransform.Click += new System.EventHandler(this.btnTransform_Click);
             // 
+            // btnSaveAuthors
+            // 
+            this.btnSaveAuthors.Location = new System.Drawing.Point(800, 349);
+            this.btnSaveAuthors.Name = "btnSaveAuthors";
+            this.btnSaveAuthors.Size = new System.Drawing.Size(332, 63);
+            this.btnSaveAuthors.TabIndex = 12;
+            this.btnSaveAuthors.Text = "Save Authors";
+            this.btnSaveAuthors.UseVisualStyleBackColor = true;
+            // 
+            // btnSaveNovels
+            // 
+            this.btnSaveNovels.Location = new System.Drawing.Point(800, 418);
+            this.btnSaveNovels.Name = "btnSaveNovels";
+            this.btnSaveNovels.Size = new System.Drawing.Size(332, 63);
+            this.btnSaveNovels.TabIndex = 13;
+            this.btnSaveNovels.Text = "Save Novels";
+            this.btnSaveNovels.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 589);
+            this.Controls.Add(this.btnSaveNovels);
+            this.Controls.Add(this.btnSaveAuthors);
             this.Controls.Add(this.btnTransform);
             this.Controls.Add(this.txtFindAuthorName);
             this.Controls.Add(this.btnFindAuthors);
@@ -205,6 +227,8 @@ namespace G1_Bookr_Main
         private System.Windows.Forms.TextBox txtFindAuthorName;
         private System.Windows.Forms.Button btnFindAuthors;
         private System.Windows.Forms.Button btnTransform;
+        private System.Windows.Forms.Button btnSaveAuthors;
+        private System.Windows.Forms.Button btnSaveNovels;
     }
 }
 
