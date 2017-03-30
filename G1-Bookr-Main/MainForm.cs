@@ -22,20 +22,6 @@ namespace G1_Bookr_Main
             InitializeComponent();
         }
 
-        private void btnGenerateAuthors_Click(object sender, EventArgs e)
-        {
-            List<Author> authors = new List<Author>
-            {
-                new Author { Name = "Arthur Clarke" },
-                new Author { Name = "Isaak Asimov" },
-                new Author { Name = "Ray Bradbury" },
-                new Author { Name = "Robert Heinlein" },
-                new Author { Name = "Philip Dick" }
-            };
-
-            DisplayAuthors(authors);
-        }
-
         private void DisplayAuthors(IEnumerable<Author> authors)
         {
             lstAuthors.Items.Clear();

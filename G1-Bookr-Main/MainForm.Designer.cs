@@ -30,7 +30,6 @@ namespace G1_Bookr_Main
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGenerateAuthors = new System.Windows.Forms.Button();
             this.lstAuthors = new System.Windows.Forms.ListBox();
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,19 +39,6 @@ namespace G1_Bookr_Main
             this.lstNovels = new System.Windows.Forms.ListBox();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnGenerateAuthors
-            // 
-            this.btnGenerateAuthors.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerateAuthors.Location = new System.Drawing.Point(793, 15);
-            this.btnGenerateAuthors.Margin = new System.Windows.Forms.Padding(6);
-            this.btnGenerateAuthors.Name = "btnGenerateAuthors";
-            this.btnGenerateAuthors.Size = new System.Drawing.Size(336, 144);
-            this.btnGenerateAuthors.TabIndex = 1;
-            this.btnGenerateAuthors.Text = "Прво Дугме";
-            this.btnGenerateAuthors.UseVisualStyleBackColor = true;
-            this.btnGenerateAuthors.Click += new System.EventHandler(this.btnGenerateAuthors_Click);
             // 
             // lstAuthors
             // 
@@ -127,7 +113,6 @@ namespace G1_Bookr_Main
             this.ClientSize = new System.Drawing.Size(1144, 589);
             this.Controls.Add(this.lstNovels);
             this.Controls.Add(this.lstAuthors);
-            this.Controls.Add(this.btnGenerateAuthors);
             this.Controls.Add(this.mainMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.mainMenu;
@@ -142,7 +127,6 @@ namespace G1_Bookr_Main
         }
 
         #endregion
-        private System.Windows.Forms.Button btnGenerateAuthors;
         private System.Windows.Forms.ListBox lstAuthors;
         private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
