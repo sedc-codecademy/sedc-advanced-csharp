@@ -42,6 +42,7 @@ namespace G1_Bookr_Main
             this.lblAuthor = new System.Windows.Forms.Label();
             this.txtFindAuthorName = new System.Windows.Forms.TextBox();
             this.btnFindAuthors = new System.Windows.Forms.Button();
+            this.btnTransform = new System.Windows.Forms.Button();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,11 +53,12 @@ namespace G1_Bookr_Main
             this.lstAuthors.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstAuthors.FormattingEnabled = true;
             this.lstAuthors.ItemHeight = 25;
-            this.lstAuthors.Location = new System.Drawing.Point(24, 23);
+            this.lstAuthors.Location = new System.Drawing.Point(33, 20);
             this.lstAuthors.Margin = new System.Windows.Forms.Padding(6);
             this.lstAuthors.Name = "lstAuthors";
             this.lstAuthors.Size = new System.Drawing.Size(302, 554);
             this.lstAuthors.TabIndex = 3;
+            this.lstAuthors.SelectedIndexChanged += new System.EventHandler(this.lstAuthors_SelectedIndexChanged);
             // 
             // mainMenu
             // 
@@ -153,11 +155,22 @@ namespace G1_Bookr_Main
             this.btnFindAuthors.UseVisualStyleBackColor = true;
             this.btnFindAuthors.Click += new System.EventHandler(this.btnFindAuthors_Click);
             // 
+            // btnTransform
+            // 
+            this.btnTransform.Location = new System.Drawing.Point(800, 253);
+            this.btnTransform.Name = "btnTransform";
+            this.btnTransform.Size = new System.Drawing.Size(332, 63);
+            this.btnTransform.TabIndex = 11;
+            this.btnTransform.Text = "Transform Data";
+            this.btnTransform.UseVisualStyleBackColor = true;
+            this.btnTransform.Click += new System.EventHandler(this.btnTransform_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 589);
+            this.Controls.Add(this.btnTransform);
             this.Controls.Add(this.txtFindAuthorName);
             this.Controls.Add(this.btnFindAuthors);
             this.Controls.Add(this.lblAuthor);
@@ -191,6 +204,7 @@ namespace G1_Bookr_Main
         private System.Windows.Forms.Label lblAuthor;
         private System.Windows.Forms.TextBox txtFindAuthorName;
         private System.Windows.Forms.Button btnFindAuthors;
+        private System.Windows.Forms.Button btnTransform;
     }
 }
 
