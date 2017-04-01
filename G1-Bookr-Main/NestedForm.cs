@@ -62,8 +62,7 @@ namespace G1_Bookr_Main
             var author = new NestedAuthor
             {
                 Id = id,
-                Name = name,
-                Novels = new List<NestedNovel>()
+                Name = name
             };
             authors.Insert(0, author);
             DisplayAuthors(authors);
@@ -87,7 +86,7 @@ namespace G1_Bookr_Main
                 Title = title,
                 Author = author
             };
-            author.Novels.Add(novel);
+            author.AddNovel(novel);
             DisplayNovels(author.Novels);
         }
     }

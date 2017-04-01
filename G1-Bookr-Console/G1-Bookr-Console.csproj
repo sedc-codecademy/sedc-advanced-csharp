@@ -48,11 +48,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="authors.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="novels.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\G1-Bookr-Entities\G1-Bookr-Entities.csproj">
       <Project>{21d0d00a-786a-4f3a-bab4-19c6f99716e1}</Project>
       <Name>G1-Bookr-Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\G1-Bookr-Parser\G1-Bookr-Parser.csproj">
+      <Project>{0b3c3d49-7fb3-4a39-bb88-69017fbcba6a}</Project>
+      <Name>G1-Bookr-Parser</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

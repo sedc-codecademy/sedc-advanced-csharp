@@ -14,8 +14,7 @@ namespace Parser
             var nauthors = authors.Select(a => new NestedAuthor
             {
                 Id = a.Id,
-                Name = a.Name,
-                Novels = null
+                Name = a.Name
             }).ToList();
 
             foreach (var author in nauthors)
@@ -28,10 +27,24 @@ namespace Parser
                         Title = n.Title,
                         Author = author
                     });
-                author.Novels = nnovels.ToList();
+                foreach (var nnovel in nnovels)
+                {
+                    author.AddNovel(nnovel);
+                }
+            }
+
+            foreach(var nauthor in nauthors.Where(n => n.Name.StartsWith("Edgar")))
+            {
+                nauthor.NovelAdded += NotifyCensors;
             }
 
             return nauthors;
         }
+
+        private static void NotifyCensors(object sender, NovelAddedEventArgs e)
+        {
+            Console.WriteLine($"New book for censoring: {e.Title} by {e.Author}");
+        }
+
     }
 }

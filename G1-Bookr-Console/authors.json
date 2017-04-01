@@ -1,0 +1,956 @@
+[
+    {
+        "id": 78,
+        "name": "Edgar Rice Burroughs"
+    },
+    {
+        "id": 79,
+        "name": "E. E. Smith"
+    },
+    {
+        "id": 80,
+        "name": "Jack Williamson"
+    },
+    {
+        "id": 81,
+        "name": "C. S. Lewis"
+    },
+    {
+        "id": 82,
+        "name": "T. H. White"
+    },
+    {
+        "id": 83,
+        "name": "A. E. van Vogt"
+    },
+    {
+        "id": 85,
+        "name": "Fritz Leiber"
+    },
+    {
+        "id": 86,
+        "name": "Edmond Hamilton"
+    },
+    {
+        "id": 87,
+        "name": "Isaac Asimov"
+    },
+    {
+        "id": 89,
+        "name": "Edward E. Smith"
+    },
+    {
+        "id": 90,
+        "name": "Jack Vance"
+    },
+    {
+        "id": 92,
+        "name": "Robert A. Heinlein",
+        "birthDate": "1907-07-07",
+        "deathDate": "1988-05-08"
+    },
+    {
+        "id": 93,
+        "name": "Alfred Bester"
+    },
+    {
+        "id": 94,
+        "name": "Hal Clement"
+    },
+    {
+        "id": 95,
+        "name": "Arthur C. Clarke"
+    },
+    {
+        "id": 97,
+        "name": "Theodore Sturgeon"
+    },
+    {
+        "id": 98,
+        "name": "Ray Bradbury"
+    },
+    {
+        "id": 99,
+        "name": "Mark Clifton and Frank Riley"
+    },
+    {
+        "id": 102,
+        "name": "Poul Anderson"
+    },
+    {
+        "id": 103,
+        "name": "Algis Budrys"
+    },
+    {
+        "id": 105,
+        "name": "Robert Sheckley"
+    },
+    {
+        "id": 106,
+        "name": "James Blish"
+    },
+    {
+        "id": 107,
+        "name": "Gordon R. Dickson"
+    },
+    {
+        "id": 108,
+        "name": "Murray Leinster"
+    },
+    {
+        "id": 109,
+        "name": "Mark Phillips"
+    },
+    {
+        "id": 110,
+        "name": "Kurt Vonnegut"
+    },
+    {
+        "id": 114,
+        "name": "Harry Harrison"
+    },
+    {
+        "id": 116,
+        "name": "Walter M. Miller, Jr."
+    },
+    {
+        "id": 117,
+        "name": "Daniel F. Galouye"
+    },
+    {
+        "id": 119,
+        "name": "Clifford D. Simak"
+    },
+    {
+        "id": 120,
+        "name": "James White"
+    },
+    {
+        "id": 122,
+        "name": "Marion Zimmer Bradley"
+    },
+    {
+        "id": 123,
+        "name": "H. Beam Piper"
+    },
+    {
+        "id": 124,
+        "name": "Jean Bruller"
+    },
+    {
+        "id": 126,
+        "name": "Philip K. Dick"
+    },
+    {
+        "id": 128,
+        "name": "Andre Norton"
+    },
+    {
+        "id": 131,
+        "name": "John Brunner"
+    },
+    {
+        "id": 132,
+        "name": "Edgar Pangborn"
+    },
+    {
+        "id": 133,
+        "name": "Cordwainer Smith"
+    },
+    {
+        "id": 137,
+        "name": "Frank Herbert"
+    },
+    {
+        "id": 138,
+        "name": "Roger Zelazny"
+    },
+    {
+        "id": 139,
+        "name": "Samuel R. Delany"
+    },
+    {
+        "id": 140,
+        "name": "Randall Garrett"
+    },
+    {
+        "id": 141,
+        "name": "James H. Schmitz"
+    },
+    {
+        "id": 142,
+        "name": "Thomas Burnett Swann"
+    },
+    {
+        "id": 143,
+        "name": "Daniel Keyes"
+    },
+    {
+        "id": 146,
+        "name": "Piers Anthony"
+    },
+    {
+        "id": 147,
+        "name": "Chester Anderson"
+    },
+    {
+        "id": 148,
+        "name": "Robert Silverberg"
+    },
+    {
+        "id": 150,
+        "name": "Alexei Panshin"
+    },
+    {
+        "id": 152,
+        "name": "R. A. Lafferty"
+    },
+    {
+        "id": 157,
+        "name": "Norman Spinrad"
+    },
+    {
+        "id": 159,
+        "name": "Ursula K. Le Guin"
+    },
+    {
+        "id": 162,
+        "name": "Wilson Tucker"
+    },
+    {
+        "id": 164,
+        "name": "Larry Niven"
+    },
+    {
+        "id": 166,
+        "name": "Anne McCaffrey"
+    },
+    {
+        "id": 169,
+        "name": "Philip José Farmer"
+    },
+    {
+        "id": 170,
+        "name": "David Gerrold"
+    },
+    {
+        "id": 183,
+        "name": "Christopher Priest"
+    },
+    {
+        "id": 184,
+        "name": "Larry Niven and Jerry Pournelle"
+    },
+    {
+        "id": 190,
+        "name": "Joe Haldeman"
+    },
+    {
+        "id": 192,
+        "name": "Frederik Pohl"
+    },
+    {
+        "id": 195,
+        "name": "Kate Wilhelm"
+    },
+    {
+        "id": 198,
+        "name": "George R. R. Martin"
+    },
+    {
+        "id": 202,
+        "name": "C. J. Cherryh"
+    },
+    {
+        "id": 203,
+        "name": "Tom Reamy"
+    },
+    {
+        "id": 204,
+        "name": "Vonda N. McIntyre"
+    },
+    {
+        "id": 205,
+        "name": "John Varley"
+    },
+    {
+        "id": 207,
+        "name": "Patricia A. McKillip"
+    },
+    {
+        "id": 208,
+        "name": "Thomas Disch"
+    },
+    {
+        "id": 214,
+        "name": "Joan D. Vinge"
+    },
+    {
+        "id": 215,
+        "name": "Gene Wolfe"
+    },
+    {
+        "id": 216,
+        "name": "Julian May"
+    },
+    {
+        "id": 218,
+        "name": "John Crowley"
+    },
+    {
+        "id": 222,
+        "name": "Donald Kingsbury"
+    },
+    {
+        "id": 226,
+        "name": "R. A. MacAvoy"
+    },
+    {
+        "id": 230,
+        "name": "David Brin"
+    },
+    {
+        "id": 231,
+        "name": "David R. Palmer"
+    },
+    {
+        "id": 232,
+        "name": "Vernor Vinge"
+    },
+    {
+        "id": 235,
+        "name": "William Gibson"
+    },
+    {
+        "id": 239,
+        "name": "Greg Bear"
+    },
+    {
+        "id": 240,
+        "name": "Orson Scott Card"
+    },
+    {
+        "id": 241,
+        "name": "Bob Shaw"
+    },
+    {
+        "id": 244,
+        "name": "L. Ron Hubbard"
+    },
+    {
+        "id": 246,
+        "name": "George Alec Effinger"
+    },
+    {
+        "id": 252,
+        "name": "Bruce Sterling"
+    },
+    {
+        "id": 254,
+        "name": "Lois McMaster Bujold"
+    },
+    {
+        "id": 259,
+        "name": "Sheri S. Tepper"
+    },
+    {
+        "id": 260,
+        "name": "Dan Simmons"
+    },
+    {
+        "id": 262,
+        "name": "Michael P. Kube-McDowell"
+    },
+    {
+        "id": 266,
+        "name": "Emma Bull"
+    },
+    {
+        "id": 268,
+        "name": "Michael Swanwick"
+    },
+    {
+        "id": 272,
+        "name": "Maureen F. McHugh"
+    },
+    {
+        "id": 274,
+        "name": "Kim Stanley Robinson"
+    },
+    {
+        "id": 276,
+        "name": "Connie Willis"
+    },
+    {
+        "id": 278,
+        "name": "Nancy Kress"
+    },
+    {
+        "id": 282,
+        "name": "John Barnes"
+    },
+    {
+        "id": 284,
+        "name": "Michael Bishop"
+    },
+    {
+        "id": 285,
+        "name": "James Morrow"
+    },
+    {
+        "id": 287,
+        "name": "Stephen Baxter"
+    },
+    {
+        "id": 289,
+        "name": "Robert J. Sawyer"
+    },
+    {
+        "id": 291,
+        "name": "Neal Stephenson"
+    },
+    {
+        "id": 292,
+        "name": "Elizabeth Moon"
+    },
+    {
+        "id": 297,
+        "name": "Walter Jon Williams"
+    },
+    {
+        "id": 302,
+        "name": "Mary Doria Russell"
+    },
+    {
+        "id": 303,
+        "name": "Robert Charles Wilson"
+    },
+    {
+        "id": 310,
+        "name": "J. K. Rowling"
+    },
+    {
+        "id": 314,
+        "name": "Ken MacLeod"
+    },
+    {
+        "id": 315,
+        "name": "Nalo Hopkinson"
+    },
+    {
+        "id": 318,
+        "name": "China Miéville"
+    },
+    {
+        "id": 322,
+        "name": "Neil Gaiman"
+    },
+    {
+        "id": 329,
+        "name": "Charles Stross"
+    },
+    {
+        "id": 333,
+        "name": "Ian McDonald"
+    },
+    {
+        "id": 334,
+        "name": "Iain M. Banks"
+    },
+    {
+        "id": 337,
+        "name": "Susanna Clarke"
+    },
+    {
+        "id": 340,
+        "name": "John Scalzi"
+    },
+    {
+        "id": 344,
+        "name": "Naomi Novik"
+    },
+    {
+        "id": 345,
+        "name": "Michael F. Flynn"
+    },
+    {
+        "id": 346,
+        "name": "Peter Watts"
+    },
+    {
+        "id": 352,
+        "name": "Michael Chabon"
+    },
+    {
+        "id": 353,
+        "name": "Cory Doctorow"
+    },
+    {
+        "id": 358,
+        "name": "Cherie Priest"
+    },
+    {
+        "id": 360,
+        "name": "Catherynne M. Valente"
+    },
+    {
+        "id": 362,
+        "name": "Paolo Bacigalupi"
+    },
+    {
+        "id": 366,
+        "name": "Mira Grant"
+    },
+    {
+        "id": 367,
+        "name": "N. K. Jemisin"
+    },
+    {
+        "id": 372,
+        "name": "James S. A. Corey"
+    },
+    {
+        "id": 373,
+        "name": "Jo Walton"
+    },
+    {
+        "id": 377,
+        "name": "Saladin Ahmed"
+    },
+    {
+        "id": 381,
+        "name": "Larry Correia"
+    },
+    {
+        "id": 382,
+        "name": "Robert Jordan and Brandon Sanderson"
+    },
+    {
+        "id": 383,
+        "name": "Ann Leckie"
+    },
+    {
+        "id": 384,
+        "name": "Katherine Addison"
+    },
+    {
+        "id": 385,
+        "name": "Kevin J. Anderson"
+    },
+    {
+        "id": 386,
+        "name": "Jim Butcher"
+    },
+    {
+        "id": 388,
+        "name": "Cixin Liu"
+    },
+    {
+        "id": 391,
+        "name": "Theodore L. Thomas & Kate Wilhelm"
+    },
+    {
+        "id": 394,
+        "name": "Thomas M. Disch"
+    },
+    {
+        "id": 395,
+        "name": "William S. Burroughs"
+    },
+    {
+        "id": 396,
+        "name": "Keith Laumer"
+    },
+    {
+        "id": 397,
+        "name": "Avram Davidson"
+    },
+    {
+        "id": 398,
+        "name": "G. C. Edmondson"
+    },
+    {
+        "id": 406,
+        "name": "Hayden Howard"
+    },
+    {
+        "id": 414,
+        "name": "Joanna Russ"
+    },
+    {
+        "id": 425,
+        "name": "David G. Compton"
+    },
+    {
+        "id": 431,
+        "name": "T. J. Bass"
+    },
+    {
+        "id": 434,
+        "name": "Isaac Asimov*"
+    },
+    {
+        "id": 442,
+        "name": "Thomas Pynchon"
+    },
+    {
+        "id": 451,
+        "name": "Arthur Byron Cover"
+    },
+    {
+        "id": 452,
+        "name": "Tanith Lee"
+    },
+    {
+        "id": 456,
+        "name": "Ian Watson"
+    },
+    {
+        "id": 460,
+        "name": "Barry N. Malzberg"
+    },
+    {
+        "id": 462,
+        "name": "Italo Calvino"
+    },
+    {
+        "id": 464,
+        "name": "Katherine MacLean"
+    },
+    {
+        "id": 465,
+        "name": "Larry Niven & Jerry Pournelle"
+    },
+    {
+        "id": 466,
+        "name": "E. L. Doctorow"
+    },
+    {
+        "id": 470,
+        "name": "Marta Randall"
+    },
+    {
+        "id": 475,
+        "name": "Terry Carr"
+    },
+    {
+        "id": 476,
+        "name": "Gregory Benford"
+    },
+    {
+        "id": 478,
+        "name": "Richard A. Lupoff"
+    },
+    {
+        "id": 482,
+        "name": "Gore Vidal"
+    },
+    {
+        "id": 483,
+        "name": "Gardner Dozois"
+    },
+    {
+        "id": 488,
+        "name": "Richard Cowper"
+    },
+    {
+        "id": 492,
+        "name": "Walter Tevis"
+    },
+    {
+        "id": 493,
+        "name": "Robert Stallman"
+    },
+    {
+        "id": 499,
+        "name": "A. A. Attanasio"
+    },
+    {
+        "id": 500,
+        "name": "Russell Hoban"
+    },
+    {
+        "id": 501,
+        "name": "Suzy McKee Charnas"
+    },
+    {
+        "id": 505,
+        "name": "Brian Aldiss"
+    },
+    {
+        "id": 515,
+        "name": "Lewis Shiner"
+    },
+    {
+        "id": 518,
+        "name": "Jack Dann"
+    },
+    {
+        "id": 522,
+        "name": "Tim Powers"
+    },
+    {
+        "id": 530,
+        "name": "Margaret Atwood"
+    },
+    {
+        "id": 531,
+        "name": "Leigh Kennedy"
+    },
+    {
+        "id": 532,
+        "name": "James K. Morrow"
+    },
+    {
+        "id": 533,
+        "name": "Pat Murphy"
+    },
+    {
+        "id": 541,
+        "name": "George Turner"
+    },
+    {
+        "id": 546,
+        "name": "Elizabeth Ann Scarborough"
+    },
+    {
+        "id": 549,
+        "name": "John Kessel"
+    },
+    {
+        "id": 550,
+        "name": "Mike Resnick"
+    },
+    {
+        "id": 551,
+        "name": "Jane Yolen"
+    },
+    {
+        "id": 553,
+        "name": "Valerie Martin"
+    },
+    {
+        "id": 556,
+        "name": "John E. Stith"
+    },
+    {
+        "id": 562,
+        "name": "Pat Cadigan"
+    },
+    {
+        "id": 563,
+        "name": "Bruce Sterling & William Gibson"
+    },
+    {
+        "id": 566,
+        "name": "Karen Joy Fowler"
+    },
+    {
+        "id": 571,
+        "name": "Kevin J. Anderson & Doug Beason "
+    },
+    {
+        "id": 576,
+        "name": "Octavia E. Butler"
+    },
+    {
+        "id": 577,
+        "name": "Jonathan Lethem"
+    },
+    {
+        "id": 579,
+        "name": "Rachel Pollack"
+    },
+    {
+        "id": 585,
+        "name": "Paul Park"
+    },
+    {
+        "id": 588,
+        "name": "Nicola Griffith"
+    },
+    {
+        "id": 589,
+        "name": "Nina Kiriki Hoffman"
+    },
+    {
+        "id": 596,
+        "name": "Kate Elliott"
+    },
+    {
+        "id": 598,
+        "name": "Jack McDevitt"
+    },
+    {
+        "id": 602,
+        "name": "Catherine Asaro"
+    },
+    {
+        "id": 604,
+        "name": "Harry Turtledove"
+    },
+    {
+        "id": 605,
+        "name": "Martha Wells"
+    },
+    {
+        "id": 611,
+        "name": "Sean Stewart"
+    },
+    {
+        "id": 615,
+        "name": "Kathleen Ann Goonan"
+    },
+    {
+        "id": 618,
+        "name": "Charles de Lint"
+    },
+    {
+        "id": 620,
+        "name": "Jeffrey Carver"
+    },
+    {
+        "id": 621,
+        "name": "Geoffrey A. Landis"
+    },
+    {
+        "id": 623,
+        "name": "Wil McCarthy"
+    },
+    {
+        "id": 628,
+        "name": "Kelley Eskridge"
+    },
+    {
+        "id": 630,
+        "name": "Robert A. Metzger"
+    },
+    {
+        "id": 635,
+        "name": "Carol Emshwiller"
+    },
+    {
+        "id": 642,
+        "name": "David Mitchell"
+    },
+    {
+        "id": 648,
+        "name": "Terry Pratchett"
+    },
+    {
+        "id": 649,
+        "name": "Geoff Ryman"
+    },
+    {
+        "id": 650,
+        "name": "John C. Wright"
+    },
+    {
+        "id": 652,
+        "name": "Ellen Kushner"
+    },
+    {
+        "id": 653,
+        "name": "Jeffrey Ford"
+    },
+    {
+        "id": 655,
+        "name": "Richard Bowes"
+    },
+    {
+        "id": 661,
+        "name": "Tobias S. Buckell"
+    },
+    {
+        "id": 667,
+        "name": "David J. Schwartz"
+    },
+    {
+        "id": 669,
+        "name": "Christopher Barzak"
+    },
+    {
+        "id": 670,
+        "name": "Laura Anne Gilman"
+    },
+    {
+        "id": 673,
+        "name": "Jeff VanderMeer"
+    },
+    {
+        "id": 675,
+        "name": "M. K. Hobson"
+    },
+    {
+        "id": 677,
+        "name": "Mary Robinette Kowal"
+    },
+    {
+        "id": 679,
+        "name": "Nnedi Okorafor"
+    },
+    {
+        "id": 683,
+        "name": "Kameron Hurley"
+    },
+    {
+        "id": 684,
+        "name": "Genevieve Valentine"
+    },
+    {
+        "id": 688,
+        "name": "Tina Connolly"
+    },
+    {
+        "id": 690,
+        "name": "Caitlín R. Kiernan"
+    },
+    {
+        "id": 695,
+        "name": "Charles E. Gannon"
+    },
+    {
+        "id": 697,
+        "name": "Linda Nagata"
+    },
+    {
+        "id": 698,
+        "name": "Sofia Samatar"
+    },
+    {
+        "id": 699,
+        "name": "Helene Wecker"
+    },
+    {
+        "id": 709,
+        "name": "Ken Liu"
+    },
+    {
+        "id": 711,
+        "name": "Lawrence M. Schoen"
+    },
+    {
+        "id": 712,
+        "name": "Fran Wilde"
+    },
+    {
+        "id": 713,
+        "name": "Коста Петров"
+    },
+    {
+        "id": 726,
+        "name": "Jules Verne"
+    },
+    {
+        "id": 727,
+        "name": "F. M. Dosoyevsky"
+    },
+    {
+        "id": 728,
+        "name": "Lav Tolstoy"
+    },
+    {
+        "id": 729,
+        "name": "O''Connor"
+    }
+]
