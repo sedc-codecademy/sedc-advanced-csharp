@@ -14,12 +14,24 @@ namespace G1_Bookr_Console
         static NestedAuthor selectedAuthor;
         static List<NestedAuthor> nauthors;
 
+        static Dictionary<string, Action> dispatcher;
+
+
         static void Main(string[] args)
         {
             //device?.DeviceConfiguration?.Channel?.ChannelMeasurement?.Algoritm?.AlgorithmType
-            
+
             //int? novelCount = (selectedAuthor.Novels != null) ? selectedAuthor.Novels.Count() : (int?)null;
             //int? novelCoun2 = selectedAuthor.Novels?.Count();
+
+            dispatcher = new Dictionary<string, Action>
+            {
+                { "a", AddAuthor },
+                { "n", AddNovel },
+                { "c", CountStuff },
+                { "s", SelectAuthor },
+                { "d", () => { Console.WriteLine("DEMO"); } }
+            };
 
             string authorsText = File.ReadAllText("authors.json");
             var mapper = new JsonParser();
@@ -45,23 +57,11 @@ namespace G1_Bookr_Console
                 Console.Write("Enter command: ");
                 var command = Console.ReadLine();
 
-                switch (command)
+                if (dispatcher.ContainsKey(command))
                 {
-                    case "a":
-                        AddAuthor();
-                        break;
-                    case "n":
-                        AddNovel();
-                        break;
-                    case "s":
-                        SelectAuthor();
-                        break;
-                    case "c":
-                        CountStuff();
-                        break;
-                    default:
-                        break;
+                    dispatcher[command]();
                 }
+
             }
         }
 
@@ -136,7 +136,7 @@ namespace G1_Bookr_Console
                 return;
             }
 
-            var author = new NestedAuthor { Name = name, Id = id};
+            var author = new NestedAuthor { Name = name, Id = id };
             author.NovelAdded += NotifyMarketing;
             nauthors.Insert(0, author);
             selectedAuthor = author;
