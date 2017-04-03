@@ -45,6 +45,7 @@
             this.btnAddAuthor = new System.Windows.Forms.Button();
             this.btnAddNovel = new System.Windows.Forms.Button();
             this.txtInputNovel = new System.Windows.Forms.TextBox();
+            this.btnShowTransformed = new System.Windows.Forms.Button();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -200,11 +201,22 @@
             this.txtInputNovel.Size = new System.Drawing.Size(219, 31);
             this.txtInputNovel.TabIndex = 10;
             // 
+            // btnShowTransformed
+            // 
+            this.btnShowTransformed.Location = new System.Drawing.Point(718, 200);
+            this.btnShowTransformed.Name = "btnShowTransformed";
+            this.btnShowTransformed.Size = new System.Drawing.Size(283, 73);
+            this.btnShowTransformed.TabIndex = 12;
+            this.btnShowTransformed.Text = "Show Transformed";
+            this.btnShowTransformed.UseVisualStyleBackColor = true;
+            this.btnShowTransformed.Click += new System.EventHandler(this.btnShowTransformed_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 492);
+            this.Controls.Add(this.btnShowTransformed);
             this.Controls.Add(this.btnAddNovel);
             this.Controls.Add(this.txtInputNovel);
             this.Controls.Add(this.btnAddAuthor);
@@ -248,6 +260,7 @@
         private System.Windows.Forms.Button btnAddAuthor;
         private System.Windows.Forms.Button btnAddNovel;
         private System.Windows.Forms.TextBox txtInputNovel;
+        private System.Windows.Forms.Button btnShowTransformed;
     }
 }
 

@@ -45,10 +45,10 @@ namespace G3_Bookr_Main
 
         private void btnWarPeace_Click(object sender, EventArgs e)
         {
-            var tolstoy = new NestedAuthor { Name = "Lev Tolstoy", Novels = new List<NestedNovel>() };
+            var tolstoy = new NestedAuthor { Name = "Lev Tolstoy" };
             var warPeace = new NestedNovel { Title = "War and peace" };
 
-            tolstoy.Novels.Add(warPeace);
+            tolstoy.AddNovel(warPeace);
             warPeace.Author = tolstoy;
 
             Authors.Add(tolstoy);

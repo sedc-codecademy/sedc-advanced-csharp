@@ -8,8 +8,33 @@ namespace Model.Nested
 {
     public class NestedAuthor
     {
+        public int Id { get; set; }
         public string Name { get; set; }
-        public List<NestedNovel> Novels { get; set; }
+
+        private List<NestedNovel> novels = new List<NestedNovel>();
+
+        public IEnumerable<NestedNovel> Novels
+        {
+            get
+            {
+                return novels.AsReadOnly();
+            }
+        }
+
+
+        public void AddNovel(NestedNovel novel)
+        {
+            novels.Add(novel);
+            if (NovelAdded != null)
+            {
+                NovelAdded(this, new NovelAddedEventArgs {
+                    Title = novel.Title,
+                    AuthorName = this.Name
+                });
+            }
+        }
+
+        public event EventHandler<NovelAddedEventArgs> NovelAdded;
 
         public override string ToString()
         {
@@ -17,8 +42,15 @@ namespace Model.Nested
         }
     }
 
+    public class NovelAddedEventArgs : EventArgs
+    {
+        public string Title { get; set; }
+        public string AuthorName { get; set; }
+    }
+
     public class NestedNovel
     {
+        public int Id { get; set; }
         public string Title { get; set; }
         public bool IsRead { get; set; }
 

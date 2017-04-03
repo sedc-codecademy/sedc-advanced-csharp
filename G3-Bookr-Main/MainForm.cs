@@ -104,8 +104,8 @@ namespace G3_Bookr_Main
             if (novel == null)
                 return;
             var brush = new SolidBrush(novel.IsRead ? Color.Gray : Color.Black);
-            e.Graphics.DrawString(novel.Title, 
-                lstNovels.Font, 
+            e.Graphics.DrawString(novel.Title,
+                lstNovels.Font,
                 brush,
                 e.Bounds.X,
                 e.Bounds.Y);
@@ -193,11 +193,12 @@ namespace G3_Bookr_Main
                 return;
 
             var id = novels.Max(n => n.ID) + 1;
-            
+
             if (novels.Any(n => n.Title == txtInputNovel.Text && n.AuthorId == author.ID))
                 return;
 
-            var novel = new Novel {
+            var novel = new Novel
+            {
                 ID = id,
                 Title = txtInputNovel.Text,
                 AuthorId = author.ID,
@@ -207,5 +208,12 @@ namespace G3_Bookr_Main
             DisplayAuthorNovels(author);
         }
 
+        private void btnShowTransformed_Click(object sender, EventArgs e)
+        {
+            var nestedAuthors = new AuthorTransformer().SeparateToNested(authors, novels);
+            NestedAuthors nestedForm = new NestedAuthors();
+            nestedForm.ShowAuthors(nestedAuthors);
+            nestedForm.Show();
+        }
     }
 }
