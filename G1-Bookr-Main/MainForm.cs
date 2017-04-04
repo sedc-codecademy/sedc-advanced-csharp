@@ -116,7 +116,7 @@ namespace G1_Bookr_Main
                 return;
 
             lblAuthor.Text = $"ID = {author.Id}" + Environment.NewLine +
-                             $"Name = {author.Name}" + Environment.NewLine +
+                             $"Name = {author.FullName}" + Environment.NewLine +
                              $"Country = {author.Country}";
 
         }
@@ -126,7 +126,7 @@ namespace G1_Bookr_Main
             var searchTerm = txtFindAuthorName.Text.ToLowerInvariant();
             if (string.IsNullOrWhiteSpace(searchTerm))
                 return;
-            var filtered = authors.Where(a => a.Name.ToLowerInvariant().Contains(searchTerm));
+            var filtered = authors.Where(a => a.FullName.ToLowerInvariant().Contains(searchTerm));
             DisplayAuthors(filtered);
         }
 

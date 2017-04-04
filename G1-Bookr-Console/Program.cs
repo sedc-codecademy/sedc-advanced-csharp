@@ -19,6 +19,10 @@ namespace G1_Bookr_Console
 
         static void Main(string[] args)
         {
+            var option = Options.OptionThree | Options.OptionFour | Options.OptionOne;
+            Console.WriteLine(option);
+            return;
+
             //device?.DeviceConfiguration?.Channel?.ChannelMeasurement?.Algoritm?.AlgorithmType
 
             //int? novelCount = (selectedAuthor.Novels != null) ? selectedAuthor.Novels.Count() : (int?)null;

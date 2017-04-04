@@ -14,7 +14,7 @@ namespace Parser
             var nauthors = authors.Select(a => new NestedAuthor
             {
                 Id = a.Id,
-                Name = a.Name
+                Name = a.FullName
             }).ToList();
 
             foreach (var author in nauthors)

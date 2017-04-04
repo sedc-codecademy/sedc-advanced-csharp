@@ -10,7 +10,6 @@ namespace G1_Threading
     class Program
     {
         static object lockObject = new object();
-        static int inEvens = 10;
 
         static void Main(string[] args)
         {
