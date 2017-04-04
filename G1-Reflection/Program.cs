@@ -76,11 +76,27 @@ namespace G1_Reflection
             //    .SetValue(weko, 0x27);
 
             //Console.WriteLine(person.GetFullName());
+            Console.WriteLine(personType.GetMethod("GetFullName").Invoke(weko, null));
             //Console.WriteLine(person.Greet("Hi"));
+            Console.WriteLine(personType.GetMethod("Greet").Invoke(weko, new object[] { "Hi" }));
             //person.AgeBy(5);
+            personType.GetMethod("AgeBy").Invoke(weko, new object[] { 5 });
 
             //Console.WriteLine(person.Age);
             Console.WriteLine(personType.GetProperty("Age").GetValue(weko));
+
+            Console.WriteLine("--- WORKING WITH DYNAMIC ---");
+
+            dynamic dweko = Activator.CreateInstance(personType);
+            dweko.FirstName = "Wekoslav";
+            dweko.LastName = "Stefanovski";
+            dweko.Age = 0x27;
+            dweko.ID = 11;
+            Console.WriteLine(dweko.GetFullName());
+            Console.WriteLine(dweko.Greet("Hello"));
+            dweko.AgeBy(10);
+            Console.WriteLine(dweko.Age);
+
         }
     }
 }
